@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= favicon_link_tag 'favicon.ico' %>
 
     <title><%= t('layout.title') %></title>
 
@@ -16,12 +17,18 @@
     <%= yield :head %>
   </head>
 
-  <body class="<%= params[:controller].split('/').join(' ') %> <%= params[:action] %> <%= params[:controller].parameterize %>-controller <%=params[:action]%>-action" data-controller="<%=params[:controller].camelize%>" data-action="<%=params[:action].camelize%>">
+  <body class="profile-page <%= params[:controller].split('/').join(' ') %> <%= params[:action] %> <%= params[:controller].parameterize %>-controller <%=params[:action]%>-action" data-controller="<%=params[:controller].camelize%>" data-action="<%=params[:action].camelize%>">
+    <!-- TODO: fix CMS navigator -->
     <%= render "storytime/application/storytime/navigation", storytime_button_classes: "dark rounded" %>
     <%= render "storytime/application/storytime/flash" %>
     <%= render "storytime/application/storytime/header" %>
 
-    <%= yield %>
+    <div class="wrapper">
+        <%= render partial: 'shared/header_page_title' %>
+        <div class="main">
+            <%= yield %>
+        </div>
+    </div>
 
     <%= render "storytime/application/storytime/footer" %>
     <%= render "storytime/sites/google_analytics_code" %>
