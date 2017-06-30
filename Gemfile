@@ -47,3 +47,6 @@ end
 
 # heroku
 gem 'rails_12factor', group: :production
+
+# storytime CMS https://github.com/CultivateLabs/storytime
+gem "storytime"
