@@ -15,3 +15,6 @@
 .rvmrc
 public/uploads
 .byebug_history
+.DS_Store
+*.sql
+*.orig
