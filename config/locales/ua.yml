@@ -1,0 +1,5 @@
+ua:
+  hello: Привіт світ
+  defaults:
+    read_more: читати далі..
+    recent_posts: Останні пости

@@ -1,0 +1,15 @@
+.row
+  %h2=t('defaults.recent_posts')
+
+.row
+  - recent_posts.each do |post|
+    .col-lg-4
+      = image_tag post.featured_media&.file&.url, class: "img-circle recent_posts_image"
+      %h4
+        =post.title
+      %p
+        = post.excerpt.html_safe
+      %p
+        = render 'storytime/blogs/tags', post: post
+      %p
+        = link_to t('defaults.read_more'), storytime.blog_path(post.slug), class: "btn btn-default"
