@@ -1,4 +1,10 @@
 <div class="container">
+
+  <!-- jumbotron -->
+  <% if @page.slug == 'home' %>
+    <%= storytime_snippet("jumbotron") %>
+  <% end %>
+
   <% if params[:preview] %>
     <div class="alert alert-info" role="alert">
       Currently viewing a preview of "<%= @page.title %>".
