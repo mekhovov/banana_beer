@@ -93,22 +93,25 @@ Storytime.configure do |config|
   config.enable_file_upload = true
 
   # AWS Region to use for file uploads.
-  # config.aws_region = ENV['STORYTIME_AWS_REGION']
+  config.aws_region = ENV['STORYTIME_AWS_REGION']
 
   # AWS Access Key ID to use for file uploads.
-  # config.aws_access_key_id = ENV['STORYTIME_AWS_ACCESS_KEY_ID']
+  config.aws_access_key_id = ENV['STORYTIME_AWS_ACCESS_KEY_ID']
 
   # AWS Secret Key to use for file uploads.
-  # config.aws_secret_key = ENV['STORYTIME_AWS_SECRET_KEY']
+  config.aws_secret_key = ENV['STORYTIME_AWS_SECRET_KEY']
 
   # Superclass for Storytime::ApplicationController
   # Defaults to the host app's ApplicationController
   # config.application_controller_superclass = "::ApplicationController"
 
-  if Rails.env.production?
-    config.media_storage = :s3
-    config.s3_bucket = 'mekhovov-test'
-  else
-    config.media_storage = :file
-  end
+  # if Rails.env.production?
+  #   config.media_storage = :s3
+  #   config.s3_bucket = 'mekhovov-test'
+  # else
+  #   config.media_storage = :file
+  # end
+
+  config.media_storage = :s3
+  config.s3_bucket = ENV['STORYTIME_AWS_S3_BUCKET']
 end
