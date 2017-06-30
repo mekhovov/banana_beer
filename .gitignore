@@ -14,3 +14,4 @@
 .env
 .rvmrc
 public/uploads
+.byebug_history
