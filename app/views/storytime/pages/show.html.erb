@@ -1,10 +1,9 @@
+<% if @page.slug == 'home' %>
+  <%= render partial: 'home/recent_posts' %>
+<% end %>
+
+
 <div class="container">
-
-  <% if @page.slug == 'home' %>
-    <%= render partial: 'home/recent_posts' %>
-    <%= render partial: 'shared/subscribe' %>
-  <% end %>
-
   <% if params[:preview] %>
     <div class="alert alert-info" role="alert">
       Currently viewing a preview of "<%= @page.title %>".
@@ -17,3 +16,8 @@
     </div>
   </div>
 </div>
+
+
+<% if @page.slug == 'home' %>
+  <%= render partial: 'shared/subscribe' %>
+<% end %>

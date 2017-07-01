@@ -1,4 +1,4 @@
-.section.text-center
+.section.text-center.section-recent-posts
   %h2.text-center.title
     =t('defaults.recent_posts')
   .team
@@ -16,3 +16,5 @@
               = link_to t('defaults.read_more'), storytime.blog_path(post.slug), class: ""
             %p
               = render 'storytime/blogs/tags', post: post
+
+-# TODO: add link to all posts
