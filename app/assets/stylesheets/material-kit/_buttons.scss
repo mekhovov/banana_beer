@@ -21,7 +21,9 @@
 
     &,
     &.btn-default{
-        @include btn-styles($gray-light);
+        // Override
+        // @include btn-styles($gray-light);
+        @include btn-styles($brand-primary);
     }
 
     &.btn-primary{

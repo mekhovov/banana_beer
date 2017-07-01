@@ -3,3 +3,7 @@ ua:
   defaults:
     read_more: читати далі..
     recent_posts: Останні пости
+    sign_in: Увійти
+    sign_out: Вийти
+    admin: Адмін
+    search: Пошук

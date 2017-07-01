@@ -1,9 +1,8 @@
 <div class="container">
 
-
   <% if @page.slug == 'home' %>
-    <!-- recent posts -->
     <%= render partial: 'home/recent_posts' %>
+    <%= render partial: 'shared/subscribe' %>
   <% end %>
 
   <% if params[:preview] %>

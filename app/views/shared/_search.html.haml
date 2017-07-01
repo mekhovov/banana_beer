@@ -1,0 +1,6 @@
+= form_tag '/blog', method: 'get', class: 'navbar-form navbar-left', role: 'search' do
+  .form-group
+    = text_field_tag :search, params[:search], placeholder: t('defaults.search'), class: "form-control"
+    = button_tag(type: "submit", class: "search_nav_button") do
+      %i.glyphicon.glyphicon-search
+

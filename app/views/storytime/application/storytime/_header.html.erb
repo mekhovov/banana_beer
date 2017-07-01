@@ -12,34 +12,15 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <%#= render Storytime::Navigation.find_by(handle: "main") %>
-          <% Storytime::Page.published.each do |page| %>
-            <li><%= link_to page.title, storytime.page_path(page) %></li>
-          <% end %>
+          <%= render_main_menu %>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%= link_to "#{t 'layout.subscribe_to', site_name: @current_storytime_site.title}", "#", data: {target: "#addSubscriptionModal", toggle: "modal"} %>
+            <%= render partial: 'shared/search' %>
           </li>
-
-          <!-- Search -->
           <li>
-            <%= form_tag '/blog', method: 'get', class: 'navbar-form navbar-left', role: 'search' do %>
-              <div class="form-group">
-                <%= text_field_tag :search, params[:search], placeholder: "Search", class: "form-control"%>
-                <%= button_tag(type: "submit", class: "search_nav_button") do %>
-                  <i class="glyphicon glyphicon-search"></i>
-                <% end %>
-              </div>
-            <% end %>
+            <%= render partial: 'shared/sign_in_out' %>
           </li>
-
-          <% if user_signed_in? %>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Sign In", Storytime.login_path %></li>
-          <% end %>
-
         </ul>
       </div>
     </div>

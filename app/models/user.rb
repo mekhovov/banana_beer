@@ -5,4 +5,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   storytime_user
+
+  def roles
+    storytime_roles
+  end
+
+  def admin?
+    roles.pluck(:name).include? ('admin')
+  end
+
 end

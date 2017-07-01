@@ -31,10 +31,12 @@ h6, .h6{
 .footer-big h5,
 .footer-big h4,
 .media .media-heading{
-    font-weight: $font-weight-extra-bold;
+    // Override
+    // font-weight: $font-weight-extra-bold;
     &,
     a{
-        color: $black-color;
+        // Override
+        // color: $black-color;
         text-decoration: none;
     }
 }

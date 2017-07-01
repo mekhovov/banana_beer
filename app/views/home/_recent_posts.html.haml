@@ -1,15 +1,18 @@
-.row
-  %h2=t('defaults.recent_posts')
-
-.row
-  - recent_posts.each do |post|
-    .col-lg-4
-      = image_tag post.featured_media&.file&.url, class: "img-circle recent_posts_image"
-      %h4
-        =post.title
-      %p
-        = post.excerpt.html_safe
-      %p
-        = render 'storytime/blogs/tags', post: post
-      %p
-        = link_to t('defaults.read_more'), storytime.blog_path(post.slug), class: "btn btn-default"
+.section.text-center
+  %h2.text-center.title
+    =t('defaults.recent_posts')
+  .team
+    .row
+      - recent_posts.each do |post|
+        .col-md-4
+          .team-player
+            = image_tag post.featured_media&.file&.url, class: "recent_posts_image"
+            %h4.title
+              =post.title
+            -# %p.description
+            -#   Description goes here
+            %p
+              = post.excerpt.html_safe
+              = link_to t('defaults.read_more'), storytime.blog_path(post.slug), class: ""
+            %p
+              = render 'storytime/blogs/tags', post: post
