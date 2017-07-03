@@ -1,20 +1,25 @@
 .section.text-center.section-recent-posts
-  %h2.text-center.title
-    =t('defaults.recent_posts')
-  .team
-    .row
-      - recent_posts.each do |post|
-        .col-md-4
-          .team-player
-            = image_tag post.featured_media&.file&.url, class: "recent_posts_image"
-            %h4.title
-              =post.title
-            -# %p.description
-            -#   Description goes here
-            %p
-              = post.excerpt.html_safe
-              = link_to t('defaults.read_more'), storytime.blog_path(post.slug), class: ""
-            %p
-              = render 'storytime/blogs/tags', post: post
+  .col-md-8.col-md-offset-2
+    %h2.text-center.title
+      =t('defaults.recent_posts')
+    .team
+      .row
+        - recent_posts.each do |post|
+          .col-md-4
+            .team-player_
+              = image_tag post.featured_media&.file&.url, class: "img-rounded recent_posts_image"
+              %h4.title
+                = post.title
+              %p
+                = render 'storytime/blogs/tags', post: post
+              %p
+                = post.excerpt.html_safe
+                = link_to t('defaults.read_more'), storytime.blog_path(post.slug)
 
--# TODO: add link to all posts
+  .row
+    .col-md-4.col-md-offset-4.text-center
+      %br
+      %hr
+      = link_to blog_slug, class: 'btn btn-success btn-round' do
+        %i.material-icons description
+        = t('layout.read_all_posts')

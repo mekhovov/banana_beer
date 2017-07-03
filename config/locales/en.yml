@@ -22,9 +22,10 @@
 en:
   hello: Hello world
   defaults:
-    read_more: read more..
-    recent_posts: Recent Posts
+    read_more: read more ➜
+    recent_posts: Recent Blogposts
     sign_in: Sign In
     sign_out: Sign Out
     admin: Admin
     search: Search
+    resd_all_posts: Read All Blogposts

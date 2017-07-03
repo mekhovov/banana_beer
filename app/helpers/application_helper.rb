@@ -48,4 +48,8 @@ module ApplicationHelper
     end
   end
 
+  def blog_slug
+    "/#{Storytime::Blog.find_by(title: 'Blog')&.slug}"
+  end
+
 end
