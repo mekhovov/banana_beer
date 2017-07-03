@@ -9,4 +9,4 @@
 	url = https://github.com/mekhovov/dont-fear-internet_presentation.git
 [submodule "public/blog4hacker_presentation"]
 	path = public/blog4hacker_presentation
-	url = git@github.com:mekhovov/blog4hacker_presentation.git
+	url = https://github.com/mekhovov/blog4hacker_presentation.git
