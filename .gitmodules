@@ -1,3 +1,12 @@
 [submodule "public/sinatra_presentation"]
 	path = public/sinatra_presentation
 	url = https://github.com/mekhovov/sinatra_presentation.git
+[submodule "public/rwd_presentation"]
+	path = public/rwd_presentation
+	url = https://github.com/mekhovov/rwd_presentation.git
+[submodule "public/dont-fear-internet_presentation"]
+	path = public/dont-fear-internet_presentation
+	url = https://github.com/mekhovov/dont-fear-internet_presentation.git
+[submodule "public/blog4hacker_presentation"]
+	path = public/blog4hacker_presentation
+	url = git@github.com:mekhovov/blog4hacker_presentation.git
