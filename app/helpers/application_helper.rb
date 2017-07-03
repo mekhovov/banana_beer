@@ -68,6 +68,8 @@ module ApplicationHelper
     case tag_name
     when 'presentation'
       :red
+    when 'conference'
+      :yellow
     when 'ruby'
       :green
     when 'EN'

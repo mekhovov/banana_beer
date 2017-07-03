@@ -1,13 +1,13 @@
 <div id="blog_post_<%= post.id %>" class="row blog-post">
   <div class="col-md-4">
-    <%= image_tag post_primary_or_default_image_url(post), class: "img-rounded img-raised post_list_image" %>
+    <%= image_tag post_primary_or_default_image_url(post), class: "img-rounded post_list_image" %>
   </div>
   <div class="col-md-8">
     <h4 class="title"><%= link_to post.title, storytime.post_path(post) %></h4>
     <p class='muted'><%= post.published_at.strftime("%b %d, %Y") %></p>
     <p><%= render 'storytime/posts/tags', post: post %></p>
     <p><%= post.excerpt %></p>
-    <p><%= link_to t('defaults.continue_reading'), storytime.post_path(post) %></p>
+    <p><%= link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap' %></p>
   </div>
 </div>
 

@@ -5,7 +5,7 @@
     .row
       - recent_posts.each do |post|
         .col-md-4
-          = image_tag post_primary_or_default_image_url(post), class: "img-rounded img-raised recent_posts_image"
+          = image_tag post_primary_or_default_image_url(post), class: "img-rounded recent_posts_image"
           %br
           %br
           %h4.title
@@ -14,7 +14,7 @@
             = render 'storytime/blogs/tags', post: post
           %p
             = post.excerpt.html_safe
-            = link_to t('defaults.continue_reading'), storytime.blog_path(post.slug)
+            = link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap'
 
   .row
     .col-md-4.col-md-offset-4.text-center
