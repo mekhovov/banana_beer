@@ -1,0 +1,3 @@
+[submodule "public/sinatra_presentation"]
+	path = public/sinatra_presentation
+	url = git@github.com:mekhovov/sinatra_presentation.git
