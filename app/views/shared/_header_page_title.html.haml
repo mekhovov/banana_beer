@@ -1,4 +1,8 @@
-%div{ class: "header header-filter parallax parallax-product parallax-#{header_colour}" }
+- title_css_class = "parallax-#{header_colour}" unless post_secondary_image_url(@post)
+
+- title_css_style = "background-image: url('#{post_secondary_image_url(@post)}')" if post_secondary_image_url(@post)
+
+%div{ class: "header header-filter parallax parallax-product #{title_css_class}", style: title_css_style }
   .container
     .row
       .col-md-8.col-md-offset-2

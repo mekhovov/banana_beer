@@ -48,8 +48,37 @@ module ApplicationHelper
     end
   end
 
+  def post_primary_image_url(post)
+    post&.featured_media&.file&.url
+  end
+
+  def post_secondary_image_url(post)
+    post&.secondary_media&.file&.url
+  end
+
+  def post_primary_or_default_image_url(post)
+    post_primary_image_url(post) || image_url('default_post_image_placeholder.svg')
+  end
+
   def blog_slug
     "/#{Storytime::Blog.find_by(title: 'Blog')&.slug}"
+  end
+
+  def tag_color(tag_name)
+    case tag_name
+    when 'presentation'
+      :red
+    when 'ruby'
+      :green
+    when 'EN'
+      :brown
+    when 'UA'
+      :brown
+    when 'RU'
+      :brown
+    else
+      :default
+    end
   end
 
 end

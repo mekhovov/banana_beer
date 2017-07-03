@@ -1,9 +1,12 @@
 ua:
   hello: Привіт світ
   defaults:
-    read_more: читати далі..
-    recent_posts: Останні пости
+    read_more: читати далі ➜
+    continue_reading: продовжити читати →
+    recent_posts: Останні Записи в Блозі
     sign_in: Увійти
     sign_out: Вийти
     admin: Адмін
     search: Пошук
+    all_posts: Читати Всі Записи в Блозі
+    add_comment: Додати Комментар

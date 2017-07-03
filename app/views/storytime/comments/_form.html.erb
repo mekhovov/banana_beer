@@ -1,7 +1,7 @@
 <% if current_user %>
   <%= simple_form_for [@post.becomes(Storytime::Post), Storytime::Comment.new] do |f| %>
     <%= f.input :content %>
-    <%= f.button :submit %>
+    <%= f.button :submit, t('defaults.add_comment') %>
   <% end %>
 <% else %>
   <div class="alert alert-info" role="alert">

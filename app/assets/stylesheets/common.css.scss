@@ -1,11 +1,6 @@
-//========================= All =========================
+// @import 'material-kit/_colors';
 
-.recent_posts_image {
-  width: auto;
-  height: auto;
-  max-height: 300px;
-  max-width: 300px;
-}
+//========================= Common =========================
 
 .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
   background: transparent;
@@ -16,20 +11,58 @@
   .page_title {
     color: $white;
   }
-
 }
 
+.inline {
+    display: inline;
+}
+
+ul.tags {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li.tag {
+        float: left;
+        line-height: 30px;
+    }
+}
+
+.tag {
+    margin: 3px;
+}
+
+//========================= Card =========================
+
+.card_content {
+    padding: 50px;
+}
+
+//========================= Home Page =========================
+
+.recent_posts_image {
+  width: 90%;
+  height: auto;
+}
+
+//========================= Blog Page =========================
+
+.post_list_image {
+  width: 100%;
+  height: auto;
+}
 
 //========================= Sections =========================
 
-.section-recent-posts {
-
+.section-home {
+    padding: 10px 0;
 }
 
-.section-subscribe {
+.section-subscribe,
+.section-post,
+.section-blog {
     background: #EEEEEE;
 }
-
 
 //========================= Parallax =========================
 
@@ -113,4 +146,87 @@
     background: -webkit-linear-gradient(-45deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
     background: linear-gradient(135deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
     // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+
+//========================= Colors =========================
+
+.background-color-default {
+    background-color: $blue-300 !important;
+}
+
+.background-color-red {
+    background-color: $red-300 !important;
+}
+
+.background-color-pink {
+    background-color: $pink-300 !important;
+}
+
+.background-color-purple {
+    background-color: $purple-300 !important;
+}
+
+.background-color-deep-purple {
+    background-color: $deep-purple-300 !important;
+}
+
+.background-color-indigo {
+    background-color: $indigo-300 !important;
+}
+
+.background-color-blue {
+    background-color: $blue-300 !important;
+}
+
+.background-color-light-blue {
+    background-color: $light-blue-300 !important;
+}
+
+.background-color-cyan {
+    background-color: $cyan-300 !important;
+}
+
+.background-color-teal {
+    background-color: $teal-300 !important;
+}
+
+.background-color-green {
+    background-color: $green-300 !important;
+}
+
+.background-color-light-green {
+    background-color: $light-green-300 !important;
+}
+
+.background-color-lime {
+    background-color: $lime-300 !important;
+}
+
+.background-color-yellow {
+    background-color: $yellow-300 !important;
+}
+
+.background-color-amber {
+    background-color: $amber-300 !important;
+}
+
+.background-color-orange {
+    background-color: $orange-300 !important;
+}
+
+.background-color-deep-orange {
+    background-color: $deep-orange-300 !important;
+}
+
+.background-color-brown {
+    background-color: $brown-300 !important;
+}
+
+.background-color-grey {
+    background-color: $grey-300 !important;
+}
+
+.background-color-blue-grey {
+    background-color: $blue-grey-300 !important;
 }

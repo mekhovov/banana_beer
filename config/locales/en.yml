@@ -23,9 +23,11 @@ en:
   hello: Hello world
   defaults:
     read_more: read more ➜
+    continue_reading: continue reading →
     recent_posts: Recent Blogposts
     sign_in: Sign In
     sign_out: Sign Out
     admin: Admin
     search: Search
     resd_all_posts: Read All Blogposts
+    add_comment: Add Comment

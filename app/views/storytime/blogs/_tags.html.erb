@@ -1,3 +1,5 @@
 <% post.tags.each do |t| %>
-  <span class='label label-primary'><%= link_to t.name, storytime.blog_path(post.blog, tag: t.name) %></span>
+  <span class='label label-primary tag background-color-<%= tag_color(t.name) %>'>
+    <%= link_to t.name, storytime.blog_path(post.blog, tag: t.name) %>
+  </span>
 <% end %>
