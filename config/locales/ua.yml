@@ -1,4 +1,6 @@
 ua:
+  layout:
+    title: Qwerty
   hello: Привіт світ
   defaults:
     read_more: читати далі ➜
