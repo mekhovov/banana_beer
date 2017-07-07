@@ -1,6 +1,15 @@
-// @import 'material-kit/_colors';
 
 //========================= Common =========================
+
+.translation_missing {
+  text-decoration: line-through !important;
+  font-weight: bold;
+}
+
+.translation_missing::after,
+.translation_missing::before {
+    content: " ❌ ";
+}
 
 .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
   background: transparent;
@@ -9,6 +18,7 @@
 
 .header {
   .page_title {
+    padding-top: 80px;
     color: $white;
   }
 }
@@ -56,6 +66,13 @@ ul.tags {
   height: auto;
 }
 
+.blog-post {
+  .title
+    a {
+      color: $black;
+    }
+}
+
 //========================= Sections =========================
 
 .section-home {
@@ -68,173 +85,3 @@ ul.tags {
     background: #EEEEEE;
 }
 
-//========================= Parallax =========================
-
-.parallax {
-    overflow: hidden;
-    background-size: 100% auto;
-    height: auto;
-    padding-top: 100px;
-    position: relative
-}
-
-.parallax .container {
-    z-index: 2;
-    position: relative
-}
-
-.parallax:after {
-    content: "";
-    direction: block;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    opacity: .76;
-    top: 0;
-    left: 0;
-    background-size: 120% 120%
-}
-
-.parallax-blue:after {
-    background: rgba(83, 60, 225, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
-    background: linear-gradient(135deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-azure:after {
-    background: rgba(64, 145, 255, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
-    background: linear-gradient(135deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-green:after {
-    background: rgba(46, 103, 4, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
-    background: linear-gradient(135deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-orange:after {
-    background: rgba(236, 22, 87, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
-    background: linear-gradient(135deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-red:after {
-    background: rgba(187, 5, 2, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
-    background: linear-gradient(135deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-purple:after {
-    background: rgba(148, 59, 234, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
-    background: linear-gradient(135deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-.parallax-gray:after {
-    background: rgba(170, 170, 170, 0.7);
-    background: -moz-linear-gradient(-45deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
-    background: linear-gradient(135deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
-    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
-}
-
-
-//========================= Colors =========================
-
-.background-color-default {
-    background-color: $blue-300 !important;
-}
-
-.background-color-red {
-    background-color: $red-300 !important;
-}
-
-.background-color-pink {
-    background-color: $pink-300 !important;
-}
-
-.background-color-purple {
-    background-color: $purple-300 !important;
-}
-
-.background-color-deep-purple {
-    background-color: $deep-purple-300 !important;
-}
-
-.background-color-indigo {
-    background-color: $indigo-300 !important;
-}
-
-.background-color-blue {
-    background-color: $blue-300 !important;
-}
-
-.background-color-light-blue {
-    background-color: $light-blue-300 !important;
-}
-
-.background-color-cyan {
-    background-color: $cyan-300 !important;
-}
-
-.background-color-teal {
-    background-color: $teal-300 !important;
-}
-
-.background-color-green {
-    background-color: $green-300 !important;
-}
-
-.background-color-light-green {
-    background-color: $light-green-300 !important;
-}
-
-.background-color-lime {
-    background-color: $lime-300 !important;
-}
-
-.background-color-yellow {
-    background-color: $yellow-300 !important;
-    color: $black !important;
-    a {
-        color: $black !important;
-    }
-}
-
-.background-color-amber {
-    background-color: $amber-300 !important;
-}
-
-.background-color-orange {
-    background-color: $orange-300 !important;
-}
-
-.background-color-deep-orange {
-    background-color: $deep-orange-300 !important;
-}
-
-.background-color-brown {
-    background-color: $brown-300 !important;
-}
-
-.background-color-grey {
-    background-color: $grey-300 !important;
-}
-
-.background-color-blue-grey {
-    background-color: $blue-grey-300 !important;
-}

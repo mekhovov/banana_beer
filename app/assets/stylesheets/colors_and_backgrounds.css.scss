@@ -1,0 +1,272 @@
+
+//========================= Colors (for tags) =========================
+
+.background-color-default {
+    background-color: $blue-200 !important;
+}
+
+.background-color-red {
+    background-color: $red-200 !important;
+}
+
+.background-color-pink {
+    background-color: $pink-200 !important;
+}
+
+.background-color-purple {
+    background-color: $purple-200 !important;
+}
+
+.background-color-deep-purple {
+    background-color: $deep-purple-200 !important;
+}
+
+.background-color-indigo {
+    background-color: $indigo-200 !important;
+}
+
+.background-color-blue {
+    background-color: $blue-200 !important;
+}
+
+.background-color-light-blue {
+    background-color: $light-blue-200 !important;
+}
+
+.background-color-cyan {
+    background-color: $cyan-200 !important;
+}
+
+.background-color-teal {
+    background-color: $teal-200 !important;
+}
+
+.background-color-green {
+    background-color: $green-200 !important;
+}
+
+.background-color-light-green {
+    background-color: $light-green-200 !important;
+}
+
+.background-color-lime {
+    background-color: $lime-200 !important;
+}
+
+.background-color-yellow {
+    background-color: $yellow-200 !important;
+    color: #444 !important;
+    a {
+        color: #444 !important;
+    }
+}
+
+.background-color-amber {
+    background-color: $amber-200 !important;
+}
+
+.background-color-orange {
+    background-color: $orange-200 !important;
+}
+
+.background-color-deep-orange {
+    background-color: $deep-orange-200 !important;
+}
+
+.background-color-brown {
+    background-color: $brown-200 !important;
+}
+
+.background-color-grey {
+    background-color: $grey-200 !important;
+}
+
+.background-color-blue-grey {
+    background-color: $blue-grey-200 !important;
+}
+
+//========================= Parallax Background =========================
+
+.parallax {
+    overflow: hidden;
+    background-size: 100% auto;
+    height: auto;
+    position: relative
+}
+
+.parallax .container {
+    z-index: 2;
+    position: relative
+}
+
+.parallax:after {
+    content: "";
+    direction: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: .76;
+    top: 0;
+    left: 0;
+    background-size: 120% 120%
+}
+
+.parallax-blue:after {
+    background: rgba(83, 60, 225, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
+    background: linear-gradient(135deg, rgba(83, 60, 225, 0.7) 0%, #447df7 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-azure:after {
+    background: rgba(64, 145, 255, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
+    background: linear-gradient(135deg, rgba(64, 145, 255, 0.7) 0%, #23ccef 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-green:after {
+    background: rgba(46, 103, 4, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
+    background: linear-gradient(135deg, rgba(46, 103, 4, 0.7) 0%, #87cb16 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-orange:after {
+    background: rgba(236, 22, 87, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
+    background: linear-gradient(135deg, rgba(236, 22, 87, 0.7) 0%, #ffa534 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-red:after {
+    background: rgba(187, 5, 2, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
+    background: linear-gradient(135deg, rgba(187, 5, 2, 0.7) 0%, #fb404b 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-purple:after {
+    background: rgba(148, 59, 234, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
+    background: linear-gradient(135deg, rgba(148, 59, 234, 0.7) 0%, #8343bd 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+.parallax-gray:after {
+    background: rgba(170, 170, 170, 0.7);
+    background: -moz-linear-gradient(-45deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
+    background: linear-gradient(135deg, rgba(170, 170, 170, 0.7) 0%, #454545 100%);
+    // filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=$top-color, endColorstr=$bottom-color, GradientType=1 )
+}
+
+//========================= Channel Background =========================
+
+.ChannelBackground {
+    background-color: #3a3a3a;
+    background-image: image-url('icons/SitePointBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#3a3a3a));
+    background-image: image-url('icons/SitePointBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #3a3a3a, #3a3a3a);
+    background-size: auto 120px, auto, auto !important;
+    background-repeat: repeat, no-repeat, no-repeat;
+}
+
+// used as default
+.ChannelBackground.u-,
+.ChannelBackground.u-web {
+    background-color: #1c94c6;
+    background-image: image-url('icons/WebBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#1c94c6), to(#1c94c6));
+    background-image: image-url('icons/WebBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #1c94c6, #1c94c6)
+}
+
+// home
+.ChannelBackground.u-home,
+.ChannelBackground.u-design, .ChannelBackground.u-design-ux, .ChannelBackground.u-ux {
+    background-color: #3cbc8d;
+    background-image: image-url('icons/DesignUxBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#3cbc8d), to(#3cbc8d));
+    background-image: image-url('icons/DesignUxBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #3cbc8d, #3cbc8d)
+}
+
+// blog
+.ChannelBackground.u-blog,
+.ChannelBackground.u-css, .ChannelBackground.u-html, .ChannelBackground.u-html-css {
+    background-color: #ef8d24;
+    background-image: image-url('icons/HtmlCssBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#ef8d24), to(#ef8d24));
+    background-image: image-url('icons/HtmlCssBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #ef8d24, #ef8d24)
+}
+
+// booked for post with image
+.ChannelBackground.u-javascript {
+    background-color: #f6b33c;
+    background-image: image-url('icons/JSBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#f6b33c), to(#f6b33c));
+    background-image: image-url('icons/JSBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #f6b33c, #f6b33c)
+}
+
+.ChannelBackground.u-gray {
+    background-color: #3a3a3a;
+    background-image: image-url('icons/SitePointBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#3a3a3a));
+    background-image: image-url('icons/SitePointBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #3a3a3a, #3a3a3a);
+}
+
+.ChannelBackground.u-bitbucket {
+    background-color: #205081;
+    background-image: image-url('icons/BitBucketBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#205081), to(#205081));
+    background-image: image-url('icons/BitBucketBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #205081, #205081)
+}
+
+
+
+.ChannelBackground.u-developer-center {
+    background-color: #0a91f0;
+    background-image: image-url('icons/DevCenterBg.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#0a91f0), to(#0a91f0));
+    background-image: image-url('icons/DevCenterBg.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #0a91f0, #0a91f0)
+}
+
+.ChannelBackground.u-entrepreneur {
+    background-color: #3dbfd9;
+    background-image: image-url('icons/EntrepreneurBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#3dbfd9), to(#3dbfd9));
+    background-image: image-url('icons/EntrepreneurBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #3dbfd9, #3dbfd9)
+}
+
+.ChannelBackground.u-java {
+    background-color: #8e4cd9;
+    background-image: image-url('icons/JavaBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#8e4cd9), to(#8e4cd9));
+    background-image: image-url('icons/JavaBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #8e4cd9, #8e4cd9)
+}
+
+.ChannelBackground.u-mobile {
+    background-color: #2c5773;
+    background-image: image-url('icons/MobileBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#2c5773), to(#2c5773));
+    background-image: image-url('icons/MobileBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #2c5773, #2c5773)
+}
+
+.ChannelBackground.u-php {
+    background-color: #669;
+    background-image: image-url('icons/PhpBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#669), to(#669));
+    background-image: image-url('icons/PhpBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #669, #669)
+}
+
+.ChannelBackground.u-ruby {
+    background-color: #eb5745;
+    background-image: image-url('icons/RubyBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#eb5745), to(#eb5745));
+    background-image: image-url('icons/RubyBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #eb5745, #eb5745)
+}
+
+.ChannelBackground.u-woorank {
+    background-color: #428bca;
+    background-image: image-url('icons/WoorankBg.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#428bca));
+    background-image: image-url('icons/WoorankBg.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #428bca, #428bca)
+}
+
+.ChannelBackground.u-wordpress {
+    background-color: #248aaf;
+    background-image: image-url('icons/WordpressBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#248aaf), to(#248aaf));
+    background-image: image-url('icons/WordpressBG.svg'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #248aaf, #248aaf)
+}
