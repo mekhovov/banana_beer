@@ -12,9 +12,3 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.paths << Rails.root.join("vendor/assets")
 Rails.application.config.assets.paths << Rails.root.join("lib/assets")
-
-# Precompile all CSS/JS assets
-Rails.application.config.assets.precompile = [Proc.new do |filename, path|
-  (path =~ /vendor\/assets\/fonts/) ||
-  (path =~ /(app|vendor|lib)\/assets/ && %w(.js .css .png .jpg .gif .ico .svg).include?(File.extname(filename)))
-end]
