@@ -1,9 +1,16 @@
 <div id="blog_post_<%= post.id %>" class="row blog-post">
   <div class="col-md-4">
-    <%= image_tag post_primary_or_default_image_url(post), class: "img-rounded post_list_image" %>
+    <%= link_to storytime.post_path(post) do %>
+      <%= image_tag post_primary_or_default_image_url(post), class: "img-rounded post_list_image" %>
+    <% end %>
   </div>
   <div class="col-md-8">
-    <h4 class="title"><%= link_to post.title, storytime.post_path(post) %></h4>
+    <h4 class="title">
+      <%= link_to post.title, storytime.post_path(post) %>
+      <small>
+        <%= post.try(:category_name) %>
+      </small>
+    </h4>
     <p class='muted'><%= post.published_at.strftime("%b %d, %Y") %></p>
     <p><%= render 'storytime/posts/tags', post: post %></p>
     <p><%= post.excerpt %></p>

@@ -4,12 +4,15 @@
       =t('defaults.recent_posts')
     .row
       - recent_posts.each do |post|
-        .col-md-4
-          = image_tag post_primary_or_default_image_url(post), class: "img-rounded recent_posts_image"
+        .col-md-4.blog-post
+          = link_to storytime.post_path(post) do
+            = image_tag post_primary_or_default_image_url(post), class: "img-rounded recent_posts_image"
           %br
           %br
           %h4.title
-            = post.title
+            = link_to post.title, storytime.post_path(post)
+            %small
+              = post.try(:category_name)
           %p
             = render 'storytime/blogs/tags', post: post
           %p
@@ -22,4 +25,4 @@
       %hr
       = link_to blog_slug, class: 'btn btn-success btn-round' do
         %i.material-icons description
-        = t('layout.read_all_posts')
+        = t('defaults.read_all_posts')

@@ -21,7 +21,7 @@ Storytime.configure do |config|
   # Add custom post types to use within Storytime.
   # Make sure that the custom post types inherit the
   # from the Storytime::Post class.
-  # config.post_types += ["CustomPostType"]
+  config.post_types += ["MyPost"]
 
   # Character limit for Storytime::Post.title <= 255
   # config.post_title_character_limit = 100

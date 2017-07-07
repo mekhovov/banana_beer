@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630152271) do
+ActiveRecord::Schema.define(version: 20170705202250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 20170630152271) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "post_categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "storytime_actions", force: :cascade do |t|
     t.string   "name"
@@ -140,9 +147,11 @@ ActiveRecord::Schema.define(version: 20170630152271) do
     t.boolean  "notifications_enabled", default: false
     t.datetime "notifications_sent_at"
     t.integer  "blog_id"
+    t.integer  "post_category_id"
   end
 
   add_index "storytime_posts", ["blog_id"], name: "index_storytime_posts_on_blog_id", using: :btree
+  add_index "storytime_posts", ["post_category_id"], name: "index_storytime_posts_on_post_category_id", using: :btree
   add_index "storytime_posts", ["slug"], name: "index_storytime_posts_on_slug", using: :btree
   add_index "storytime_posts", ["user_id"], name: "index_storytime_posts_on_user_id", using: :btree
 
