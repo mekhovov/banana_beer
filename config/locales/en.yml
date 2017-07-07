@@ -10,5 +10,7 @@ en:
     sign_out: Sign Out
     admin: Admin
     search: Search
-    resd_all_posts: Read All Blogposts
+    read_all_posts: Read All Blogposts
     add_comment: Add Comment
+    categories: Categories
+    tags: Tags

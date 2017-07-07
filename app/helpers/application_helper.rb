@@ -23,9 +23,14 @@ module ApplicationHelper
     Storytime::BlogPost.published.order(published_at: :desc).limit(3)
   end
 
+  def current_page_slug
+    @page&.slug
+  end
+
   def header_colour
     # available colors: blue, azure, green, orange, red, purple, gray
-    case @page&.slug
+    # use it with: "header header-filter parallax parallax-product parallax-#{color}"
+    case current_page_slug
     when 'home'
       :green
     when 'blog'
@@ -58,6 +63,18 @@ module ApplicationHelper
 
   def post_primary_or_default_image_url(post)
     post_primary_image_url(post) || image_url('default_post_image_placeholder.svg')
+  end
+
+  def header_page_title_bg_style(post)
+    if post_secondary_image_url(post)
+      <<-EOS
+      background-color: #f6b33c;
+      background-image: url('#{post_secondary_image_url(@post)}'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#f6b33c), to(#f6b33c));
+      background-image: url('#{post_secondary_image_url(@post)}'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #f6b33c, #f6b33c);
+      EOS
+    else
+      ''
+    end
   end
 
   def blog_slug

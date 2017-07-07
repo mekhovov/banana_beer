@@ -10,5 +10,7 @@ ua:
     sign_out: Вийти
     admin: Адмін
     search: Пошук
-    all_posts: Читати Всі Записи в Блозі
+    read_all_posts: Читати Всі Записи в Блозі
     add_comment: Додати Комментар
+    categories: Категорії
+    tags: Тегі
