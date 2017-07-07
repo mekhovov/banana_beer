@@ -14,7 +14,7 @@
       <%= stylesheet_link_tag "disable-transitions-for-test-env", media: "all" %>
     <% end %>
     
-    <%= javascript_include_tag "storytime/application" %>
+    <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "tidy" unless Rails.env.test? %>
 
     <% if Rails.env.test? # needs to be after main js file %>
