@@ -85,3 +85,25 @@ ul.tags {
     background: #EEEEEE;
 }
 
+.section-post {
+  .container {
+    margin-top: -220px
+  }
+}
+
+//========================= Title Headers =========================
+
+.homepage {
+    .header{
+        height: 380px;
+        .page_title {
+          padding-top: 80px;
+        }
+    }
+}
+
+.header {
+  .page_title {
+    padding-top: 40px;
+  }
+}

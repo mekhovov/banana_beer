@@ -27,16 +27,34 @@ module ApplicationHelper
     @page&.slug
   end
 
-  def header_colour
-    # available colors: blue, azure, green, orange, red, purple, gray
-    # use it with: "header header-filter parallax parallax-product parallax-#{color}"
+  def title_css_style
+    if post_secondary_image_url(@post)
+      <<-HTML
+      background-size: auto 120px, auto, auto !important;
+      background-repeat: repeat, no-repeat, no-repeat;
+      "background-image: url('#{post_secondary_image_url(@post)}')";
+      HTML
+    else
+      ''
+    end
+  end
+
+  def hide_title?
+    current_page_slug.nil?
+  end
+
+  def parallax_colors
+    %w(blue azure green orange red purple gray)
+  end
+
+  def header_page_title_class
     case current_page_slug
     when 'home'
-      :green
+      "ChannelBackground u-home"
     when 'blog'
-      :red
+      "ChannelBackground u-blog"
     else
-      :orange
+      "header-filter parallax parallax-product parallax-#{parallax_colors.sample}"
     end
   end
 
@@ -63,18 +81,6 @@ module ApplicationHelper
 
   def post_primary_or_default_image_url(post)
     post_primary_image_url(post) || image_url('default_post_image_placeholder.svg')
-  end
-
-  def header_page_title_bg_style(post)
-    if post_secondary_image_url(post)
-      <<-EOS
-      background-color: #f6b33c;
-      background-image: url('#{post_secondary_image_url(@post)}'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#f6b33c), to(#f6b33c));
-      background-image: url('#{post_secondary_image_url(@post)}'), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #f6b33c, #f6b33c);
-      EOS
-    else
-      ''
-    end
   end
 
   def blog_slug
