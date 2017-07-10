@@ -4,8 +4,11 @@ class MyPost < Storytime::BlogPost
   belongs_to :post_category
   validates :post_category_id, presence: true
 
+  scope :previous_post, -> (current_post) { published.order(published_at: :desc).where('id < ?', current_post.id) }
+  scope :next_post,    -> (current_post) { published.order(published_at: :desc).where('id > ?', current_post.id) }
+
   def category_name
-    post_category.name
+    post_category&.name
   end
 
 end

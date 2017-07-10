@@ -14,3 +14,5 @@ en:
     add_comment: Add Comment
     categories: Categories
     tags: Tags
+    next_post: "%{title} →"
+    previous_post: "← %{title}"

@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def recent_posts
-    Storytime::BlogPost.published.order(published_at: :desc).limit(3)
+    MyPost.published.order(published_at: :desc).limit(3)
   end
 
   def current_page_slug
@@ -30,9 +30,9 @@ module ApplicationHelper
   def title_css_style
     if post_secondary_image_url(@post)
       <<-HTML
-      background-size: auto 120px, auto, auto !important;
+      background-size: auto 190px, auto, auto !important;
       background-repeat: repeat, no-repeat, no-repeat;
-      "background-image: url('#{post_secondary_image_url(@post)}')";
+      background-image: url('#{post_secondary_image_url(@post)}');
       HTML
     else
       ''
@@ -44,7 +44,7 @@ module ApplicationHelper
   end
 
   def parallax_colors
-    %w(blue azure green orange red purple gray)
+    %w(blue azure green orange red purple)
   end
 
   def header_page_title_class
@@ -88,22 +88,32 @@ module ApplicationHelper
   end
 
   def tag_color(tag_name)
-    case tag_name
-    when 'presentation'
-      :red
-    when 'conference'
-      :yellow
-    when 'ruby'
-      :green
-    when 'EN'
-      :brown
-    when 'UA'
-      :brown
-    when 'RU'
-      :brown
-    else
-      :default
-    end
+    # case tag_name
+    # when 'presentation'
+    #   :red
+    # when 'conference'
+    #   :yellow
+    # when 'ruby'
+    #   :green
+    # when 'EN'
+    #   :brown
+    # when 'UA'
+    #   :brown
+    # when 'RU'
+    #   :brown
+    # else
+    #   :default
+    # end
+
+    :default
+  end
+
+  def take_previous_post(post)
+    MyPost.previous_post(post).first
+  end
+
+  def take_next_post(post)
+    MyPost.next_post(post).last
   end
 
 end

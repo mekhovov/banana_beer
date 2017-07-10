@@ -1,0 +1,24 @@
+.section.section-post
+  .container
+    - if params[:preview]
+      .alert.alert-info{:role => "alert"}
+        Currently viewing a preview of "#{@post.title}".
+    .card.card_content
+      .row
+        .col-md-12
+          %h2
+            = @post.title
+            %small
+              = @post.try(:category_name)
+      %hr/
+      .row
+        .col-md-12
+          = @post.content.html_safe
+      .row
+        .col-md-12
+          %hr/
+          = render 'storytime/blogs/tags', post: @post
+
+    = render partial: 'shared/prev_next_post'
+    = render partial: 'shared/read_all_posts'
+    = render_comments if @post.show_comments? && !@post.preview

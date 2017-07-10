@@ -1,0 +1,12 @@
+- prev_post = take_previous_post(@post)
+- next_post = take_next_post(@post)
+
+.row
+  .col-md-6
+    - if prev_post
+      %h4.pull-left
+        = link_to t('defaults.previous_post', title: prev_post.title), storytime.post_path(prev_post)
+  .col-md-6
+    - if next_post
+      %h4.pull-right
+        = link_to t('defaults.next_post', title: next_post.title), storytime.post_path(next_post)
