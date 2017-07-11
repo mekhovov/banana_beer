@@ -1,0 +1,7 @@
+@mixin badge-color($color) {
+    border-color: $color;
+    color: $color;
+    a {
+      color: $color;
+    }
+}

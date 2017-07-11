@@ -13,7 +13,7 @@ module ApplicationHelper
     end
     if current_user&.admin?
       menu_html << content_tag(:li) do
-        link_to t('defaults.admin'), storytime_admin_path
+        link_to t('defaults.admin'), storytime_admin_path, target: '_blank'
       end
     end
     menu_html.html_safe
@@ -85,27 +85,6 @@ module ApplicationHelper
 
   def blog_slug
     "/#{Storytime::Blog.find_by(title: 'Blog')&.slug}"
-  end
-
-  def tag_color(tag_name)
-    # case tag_name
-    # when 'presentation'
-    #   :red
-    # when 'conference'
-    #   :yellow
-    # when 'ruby'
-    #   :green
-    # when 'EN'
-    #   :brown
-    # when 'UA'
-    #   :brown
-    # when 'RU'
-    #   :brown
-    # else
-    #   :default
-    # end
-
-    :default
   end
 
   def take_previous_post(post)

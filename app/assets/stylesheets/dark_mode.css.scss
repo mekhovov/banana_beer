@@ -1,0 +1,179 @@
+@import 'now-ui-kit/_variables';
+@import 'now-ui-kit/plugins/_plugin-bootstrap-switch';
+@import 'now-ui-kit/mixins/_badges';
+@import 'now-ui-kit/mixins/buttons';
+@import 'now-ui-kit/mixins/_inputs';
+@import 'now-ui-kit/_badges';
+@import 'now-ui-kit/_buttons';
+
+//========================= Switch =========================
+
+.navbar .switch-background {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.dark_light_switcher {
+  .switch {
+    margin-right: -10px;
+  }
+  .switch_option {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    line-height: 21px;
+  }
+}
+
+//========================= Dark Mode =========================
+
+$black-bg:                   rgba(30,30,30,.97) !default;
+
+$black-color2:                #2c2c2c !default;
+$black-hr2:                   #444444 !default;
+
+$light-gray:                 #E3E3E3 !default;
+$medium-gray:                #DDDDDD !default;
+$dark-gray:                  #9A9A9A !default;
+
+.make_it_dark {
+  filter: brightness(75%);
+}
+
+.bg-white{
+    background-color: $white-color !important;
+}
+
+[data-background-color="orange"]{
+    background-color: $orange-bg;
+}
+[data-background-color="black"]{
+    background-color: $black-color2;
+}
+
+[data-background-color="black-hr2"]{
+    background-color: $black-hr2;
+}
+
+[data-background-color]{
+    color: $white-color;
+
+    .title,
+    .social-description h2,
+    p,
+    h1,h2,h3,h4,h5,h6,a:not(.btn),
+    .icons-container i{
+        color: $white-color;
+    }
+
+    .description,
+    .social-description p{
+        color: $opacity-8;
+    }
+
+    //radio and checkboxes
+    .checkbox label::before,
+    .checkbox label::after,
+    .radio label::before,
+    .radio label::after{
+        border-color: $opacity-2;
+    }
+
+    .checkbox label::after,
+    .checkbox label,
+    .radio label{
+        color: $white-color;
+    }
+
+    .checkbox input[type="checkbox"]:disabled + label,
+    .radio input[type="radio"]:disabled + label  {
+        color: $white-color;
+    }
+
+    .radio input[type="radio"]:not(:disabled):hover + label::after,
+    .radio input[type="radio"]:checked + label::after {
+        background-color: $white-color;
+        border-color: $white-color;
+    }
+
+    //inputs
+    // @include input-coloured-bg($opacity-5, $white-color, $white-color, $transparent-bg, $opacity-1, $opacity-2);
+
+    .input-group-addon,
+    .form-group.form-group-no-border .input-group-addon,
+    .input-group.form-group-no-border .input-group-addon{
+        color: $opacity-8;
+    }
+
+    //buttons
+    .btn.btn-simple{
+        background-color: $transparent-bg;
+        border-color: $opacity-5;
+        color: $white-color;
+
+        &:hover,
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: $transparent-bg;
+            border-color: $white-color;
+        }
+    }
+
+    //tabs
+    .nav-tabs{
+        > .nav-item{
+            >.nav-link{
+                i.now-ui-icons{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    &.section-nucleo-icons .icons-container i:nth-child(6){
+        color: $white-color;
+    }
+}
+
+.blockquote{
+    border-left: none;
+    border: 1px solid $default-color;
+    padding: 20px;
+    font-size: $font-size-blockquote;
+    line-height: 1.8;
+
+    small{
+        color: $default-color;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+    }
+
+    &.blockquote-primary{
+        border-color: $primary-color;
+        color: $primary-color;
+
+        small{
+            color: $primary-color;
+        }
+    }
+
+    &.blockquote-danger{
+        border-color: $danger-color;
+        color: $danger-color;
+
+        small{
+            color: $danger-color;
+        }
+    }
+
+    &.blockquote-white{
+        border-color: $opacity-8;
+        color: $white-color;
+
+        small{
+            color: $opacity-8;
+        }
+    }
+}
+

@@ -16,3 +16,5 @@ ua:
     tags: Тегі
     next_post: "%{title} →"
     previous_post: "← %{title}"
+    dark: Темно
+    light: Світло

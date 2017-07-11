@@ -4,7 +4,7 @@
 <ul class="tags">
   <% tag_cloud Storytime::Post.tag_counts, %w[s m l] do |tag, css_class| %>
     <li class="tag">
-      <span class='label label-primary background-color-<%= tag_color(tag.name) %>'>
+      <span class='badge badge-default tag'>
         <%= link_to tag.name, storytime.blog_path(@page, tag: tag.name), class: css_class %>
       </span>
     </li>

@@ -16,3 +16,5 @@ en:
     tags: Tags
     next_post: "%{title} →"
     previous_post: "← %{title}"
+    dark: Dark
+    light: Light
