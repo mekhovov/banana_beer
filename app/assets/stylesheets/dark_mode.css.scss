@@ -36,8 +36,37 @@ $light-gray:                 #E3E3E3 !default;
 $medium-gray:                #DDDDDD !default;
 $dark-gray:                  #9A9A9A !default;
 
+
 .make_it_dark {
-  filter: brightness(75%);
+    overflow: hidden;
+    background-size: 100% auto;
+    height: auto;
+    position: relative;
+    background-color: #3a3a3a !important;
+    background-image: image-url(''), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), -webkit-gradient(linear, left top, left bottom, from(#3a3a3a), to(#3a3a3a))  !important;
+    background-image: image-url(''), linear-gradient(180deg, hsla(0, 0%, 100%, .25), hsla(0, 0%, 100%, 0)), linear-gradient(180deg, #3a3a3a, #3a3a3a)  !important;
+}
+
+
+.make_it_dark .container {
+    z-index: 2;
+    position: relative;
+}
+
+.make_it_dark:after {
+    content: "";
+    direction: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: .76;
+    top: 0;
+    left: 0;
+    background-size: 120% 120%;
+    background: -moz-linear-gradient(-45deg, rgba(10, 10, 10, 0.7) 0%, #111 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(10, 10, 10, 0.7) 0%, #111 100%);
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, #111 100%);
 }
 
 .bg-white{
