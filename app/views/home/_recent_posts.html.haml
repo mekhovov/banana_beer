@@ -14,9 +14,10 @@
             %small
               = post.try(:category_name)
           %p
+            = post.excerpt.html_safe
+          %p
             = render 'storytime/blogs/tags', post: post
           %p
-            = post.excerpt.html_safe
             = link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap'
 
   = render partial: 'shared/read_all_posts'

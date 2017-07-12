@@ -1,3 +1,5 @@
-<% post.tags.each do |t| %>
-  <span class='badge badge-default tag'><%= link_to t.name, storytime.blog_path(post.blog, tag: t.name) %></span>
-<% end %>
+<div class="item-extra chip-list condensed">
+  <% post.tags.each do |t| %>
+    <%= link_to "##{t.name}", storytime.blog_path(post.blog, tag: t.name), class: 'chip muted small' %>
+  <% end %>
+</div>

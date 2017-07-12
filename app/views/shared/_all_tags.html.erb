@@ -1,12 +1,9 @@
 <h5>
   <%= t('defaults.tags') %>
 </h5>
-<ul class="tags">
+
+<div class="item-extra chip-list condensed">
   <% tag_cloud Storytime::Post.tag_counts, %w[s m l] do |tag, css_class| %>
-    <li class="tag">
-      <span class='badge badge-default tag'>
-        <%= link_to tag.name, storytime.blog_path(@page, tag: tag.name), class: css_class %>
-      </span>
-    </li>
+    <%= link_to "##{tag.name}", storytime.blog_path(@page, tag: tag.name), class: "chip  tag #{css_class}" %>
   <% end %>
-</ul>
+</div>

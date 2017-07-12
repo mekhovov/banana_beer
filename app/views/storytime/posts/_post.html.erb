@@ -12,8 +12,8 @@
       </small>
     </h4>
     <p class='muted'><%= post.published_at.strftime("%b %d, %Y") %></p>
-    <p><%= render 'storytime/posts/tags', post: post %></p>
     <p><%= post.excerpt %></p>
+    <p><%= render 'storytime/posts/tags', post: post %></p>
     <p><%= link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap' %></p>
   </div>
 </div>
