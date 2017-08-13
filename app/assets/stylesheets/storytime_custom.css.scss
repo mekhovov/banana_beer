@@ -32,12 +32,11 @@ $st-font-family-sans-serif: $font-family-sans-serif;
 $st-font-family-serif: $mdb-font-family;
 
 $st-headings-font-family: $st-font-family-serif;
-$st-headings-font-family: $mdb-font-family;
+// $st-headings-font-family: $mdb-font-family;
 
 // $st-headings-font-weight: 700;
-$st-headings-font-weight: $font-weight-bold;
+$st-headings-font-weight: 300;
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -75,6 +74,8 @@ $st-headings-font-weight: $font-weight-bold;
   @import "storytime/navigation";
   @import "storytime/scroll-panels";
   @import "storytime/dashboard_overrides";
+
+  @import 'lib/paper-kit'; // override storytime's styles
 }
 
 @import "storytime/snippets";

@@ -14,11 +14,14 @@
  *= require_self
  */
 
+@import "lib/bootstrap_3_variables";
 @import "bootstrap";
 @import 'fonts';
-@import 'material-kit/_variables';
+@import 'lib/nucleo-icons';
 @import 'storytime_custom';
-@import 'material-kit';
+@import 'lib/paper-kit';
 @import 'colors_and_backgrounds';
 @import 'common';
-@import 'dark_mode';
+
+// TODO: fix dark mode
+// @import 'dark_mode';
