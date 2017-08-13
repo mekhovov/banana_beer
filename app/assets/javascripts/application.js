@@ -11,6 +11,9 @@
 // about supported directives.
 //
 //= require_self
+//= require jquery
+//= require tether
+//= require bootstrap-sprockets
 //= require storytime/application.js
 //= require turbolinks
 //= require_tree ./lib
