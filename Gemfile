@@ -48,5 +48,13 @@ end
 # heroku
 gem 'rails_12factor', group: :production
 
+# bootstrap 4
+gem 'bootstrap', '~> 4.0.0.alpha6'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 # storytime CMS https://github.com/CultivateLabs/storytime
-gem "storytime"
+# use forms for storytime and leather to support bootstrap 4
+gem 'storytime', '~> 2.1', :git => "git@github.com:mekhovov/storytime.git", :branch => 'master'
+gem 'leather', '>= 3.5', :git => "git@github.com:mekhovov/leather.git", :branch => 'master'
