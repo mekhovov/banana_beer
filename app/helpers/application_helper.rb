@@ -6,17 +6,18 @@ module ApplicationHelper
       render main_navigation
     else
       Storytime::Page.published.collect do |page|
-        content_tag :li do
-          link_to page.title, storytime.page_path(page)
+        content_tag :li, class: 'nav-item' do
+          link_to page.title, storytime.page_path(page), class: 'nav-link', 'data-scroll': 'true'
         end
-      end
-    end
-    if current_user&.admin?
-      menu_html << content_tag(:li) do
-        link_to t('defaults.admin'), storytime_admin_path, target: '_blank'
-      end
+      end.join(' ')
     end
     menu_html.html_safe
+  end
+
+  def render_admin_menu_item
+    if current_user&.admin?
+      link_to t('defaults.admin'), storytime_admin_path, target: '_blank', class: 'nav-link', 'data-scroll': 'true'
+    end
   end
 
   def recent_posts
@@ -28,12 +29,23 @@ module ApplicationHelper
   end
 
   def title_css_style
-    if post_secondary_image_url(@post)
+    case current_page_slug
+    when 'home'
+      "background-image: url('#{image_path('landing_page_bg.jpg')}');"
+    else
+      return '' unless post_secondary_image_url(@post)
       <<-HTML
       background-size: auto 190px, auto, auto !important;
       background-repeat: repeat, no-repeat, no-repeat;
       background-image: url('#{post_secondary_image_url(@post)}');
       HTML
+    end
+  end
+
+  def page_filter_class
+    case current_page_slug
+    when 'home'
+      'filter'
     else
       ''
     end
@@ -47,14 +59,18 @@ module ApplicationHelper
     %w(blue azure green orange red purple)
   end
 
+  def random_bg
+    "header-filter parallax parallax-product parallax-#{parallax_colors.sample}"
+  end
+
   def header_page_title_class
     case current_page_slug
     when 'home'
-      "ChannelBackground u-home"
+      "page-header-small"
     when 'blog'
-      "ChannelBackground u-blog"
+      "page-header-very-small ChannelBackground u-blog"
     else
-      "header-filter parallax parallax-product parallax-#{parallax_colors.sample}"
+      "page-header-very-small #{random_bg}"
     end
   end
 
@@ -64,11 +80,19 @@ module ApplicationHelper
       when 'home'
         storytime_snippet("home_page_title")
       else
-        @page&.title
+        content_tag :h1 do
+          @page&.title
+        end
       end
     elsif @post
-      @post.title
+      content_tag :h1 do
+        @post.title
+      end
     end
+  end
+
+  def home_page?
+    @page&.slug == 'home'
   end
 
   def post_primary_image_url(post)

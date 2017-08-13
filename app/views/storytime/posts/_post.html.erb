@@ -1,22 +1,37 @@
-<div id="blog_post_<%= post.id %>" class="row blog-post">
-  <div class="col-md-4">
-    <%= link_to storytime.post_path(post) do %>
-      <%= image_tag post_primary_or_default_image_url(post), class: "img-rounded post_list_image" %>
-    <% end %>
-  </div>
-  <div class="col-md-8">
-    <h4 class="title">
-      <%= link_to post.title, storytime.post_path(post) %>
-      <small>
-        <%= post.try(:category_name) %>
-      </small>
-    </h4>
-    <p class='muted'><%= post.published_at.strftime("%b %d, %Y") %></p>
-    <p><%= post.excerpt %></p>
-    <p><%= render 'storytime/posts/tags', post: post %></p>
-    <p><%= link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap' %></p>
+<div class="card card-plain card-blog" id="blog_post_<%= post.id %>">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-image">
+        <%= link_to storytime.post_path(post) do %>
+          <%= image_tag post_primary_or_default_image_url(post), class: "img" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card-block">
+        <h6 class="card-category text-info">
+          <%= post.try(:category_name) %>
+        </h6>
+        <h3 class="card-title">
+          <a href="#pablo">
+            <%= link_to post.title, storytime.post_path(post) %>
+          </a>
+        </h3>
+        <p class="card-description">
+          <%= post.excerpt %>
+
+          <%= link_to storytime.post_path(post), class: 'btn btn-link btn-default btn-move-right nowrap' do %>
+            <%= t('defaults.read_more') %>
+            <i class="fa fa-angle-right"></i>
+          <% end %>
+        </p>
+        <p class="author">
+          <%= post.published_at.strftime("%b %d, %Y") %>
+        </p>
+        <p class="tags">
+          <%= render 'storytime/posts/tags', post: post %>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
-
-<br>
-<br>

@@ -1,4 +1,4 @@
 - if user_signed_in?
-  = link_to t('defaults.sign_out'), destroy_user_session_path, method: :delete
+  = link_to t('defaults.sign_out'), destroy_user_session_path, method: :delete, class: 'nav-link', 'data-scroll': 'true'
 - else
-  = link_to t('defaults.sign_in'), Storytime.login_path
+  = link_to t('defaults.sign_in'), Storytime.login_path, class: 'nav-link', 'data-scroll': 'true'

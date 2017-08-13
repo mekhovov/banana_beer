@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
+    <%= favicon_link_tag 'favicon.ico' %>
     <link rel="apple-touch-icon" sizes="76x76" href="<%= image_path('apple-icon.png') %>">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <%= favicon_link_tag 'favicon.ico' %>
+    <meta name="viewport" content="width=device-width" />
 
     <title><%= t('layout.title') %></title>
 
@@ -17,12 +20,12 @@
 
   <body class="<%= params[:controller].split('/').join(' ') %> <%= params[:action] %> <%= params[:controller].parameterize %>-controller <%=params[:action]%>-action" data-controller="<%=params[:controller].camelize%>" data-action="<%=params[:action].camelize%>">
     <!-- TODO: fix CMS navigator -->
-    <%= render "storytime/application/storytime/navigation", storytime_button_classes: "dark rounded" %>
+    <%= render "storytime/application/storytime/navigation", storytime_button_classes: "rounded" %>
     <%= render "storytime/application/storytime/flash" %>
     <%= render "storytime/application/storytime/header" %>
+    <%= render partial: 'shared/header_page_title' unless hide_title? %>
 
     <div class="wrapper">
-        <%= render partial: 'shared/header_page_title' %>
         <div class="main">
             <%= yield %>
         </div>

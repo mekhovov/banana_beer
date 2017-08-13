@@ -1,12 +1,20 @@
 - prev_post = take_previous_post(@post)
 - next_post = take_next_post(@post)
 
-.row
-  .col-md-6
-    - if prev_post
-      %h4.pull-left
-        = link_to t('defaults.previous_post', title: prev_post.title), storytime.post_path(prev_post)
-  .col-md-6
-    - if next_post
-      %h4.pull-right
-        = link_to t('defaults.next_post', title: next_post.title), storytime.post_path(next_post)
+.separator
+.section.section-white
+  .container
+    %hr
+    .row
+      .col-md-6
+        - if prev_post
+          .pull-left
+            = link_to storytime.post_path(prev_post), class: 'btn btn-link btn-default btn-move-right' do
+              %i.fa.fa-angle-left
+              = prev_post.title
+      .col-md-6
+        - if next_post
+          .pull-right
+            = link_to storytime.post_path(next_post), class: 'btn btn-link btn-default btn-move-right' do
+              = next_post.title
+              %i.fa.fa-angle-right

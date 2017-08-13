@@ -1,0 +1,34 @@
+
+<li class="nav-item">
+  <%= render_admin_menu_item %>
+</li>
+<li class="nav-item">
+  <%= render partial: 'shared/sign_in_out' %>
+</li>
+
+
+<!--
+  TODO:
+      - fix dark_mode_switcher
+      - fix dropdown-menu
+-->
+
+
+<!--
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown">
+    <%= t('defaults.user_menu') %>
+  </a>
+    <ul class="dropdown-menu dropdown-menu-right dropdown-danger">
+      <li class="dropdown-item">
+        <%= render partial: 'shared/dark_mode_switcher' %>
+      </li>
+      <li class="dropdown-item">
+        <%= render_admin_menu_item %>
+      </li>
+      <li class="dropdown-item">
+        <%= render partial: 'shared/sign_in_out' %>
+      </li>
+    </ul>
+</li>
+-->

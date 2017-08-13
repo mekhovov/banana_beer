@@ -1,24 +1,39 @@
-.section.section-post
+.section.section-gray.section-post.blog-page
   .container
-    - if params[:preview]
-      .alert.alert-info{:role => "alert"}
-        Currently viewing a preview of "#{@post.title}".
-    .card.card_content
+    .row
+      .col-md-6.offset-md-3.text-center.title
+        - if params[:preview]
+          .alert.alert-info{:role => "alert"}
+            Currently viewing a preview of "#{@post.title}".
+        %h2
+          = @post.title
+
+    .article
       .row
-        .col-md-12
-          %h2
-            = @post.title
-            %small
-              = @post.try(:category_name)
-      %hr/
+        .col-md-10.offset-md-1
+          %h4.text-center.title-uppercase
+            = @post.try(:category_name)
+          %h6.text-center
+            = @post.published_at.strftime("%b %d, %Y")
+
+
       .row
-        .col-md-12
-          = @post.content.html_safe
-      .row
-        .col-md-12
-          %hr/
-          = render 'storytime/blogs/tags', post: @post
+        .col-md-8.offset-md-2
+          %a{ href: "javascrip: void(0);" }
+            .card{ 'data-radius': 'none', style: "background-image: url('#{ post_primary_or_default_image_url(@post) }');" }
+
+          .article-content
+            = @post.content.html_safe
+
+          .article-footer
+            .container
+              .row
+                .col-md-12
+                  %h5
+                    = t('defaults.tags')
+                  = render 'storytime/blogs/tags', post: @post
 
     = render partial: 'shared/prev_next_post'
-    = render partial: 'shared/read_all_posts'
+    .separator
+    %br
     = render_comments if @post.show_comments? && !@post.preview

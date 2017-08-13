@@ -3,8 +3,7 @@ en:
     title: Qwerty
   hello: Hello world
   defaults:
-    read_more: read more ➜
-    continue_reading: continue reading →
+    read_more: read more
     recent_posts: Recent Blogposts
     sign_in: Sign In
     sign_out: Sign Out
@@ -14,7 +13,7 @@ en:
     add_comment: Add Comment
     categories: Categories
     tags: Tags
-    next_post: "%{title} →"
-    previous_post: "← %{title}"
     dark: Dark
     light: Light
+    user_menu: User
+    subscribe: Subscribe

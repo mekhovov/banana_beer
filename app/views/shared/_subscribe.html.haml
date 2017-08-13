@@ -1,6 +1,5 @@
-.section.section-subscribe
-  .row
-    .col-md-4.col-md-offset-4.text-center
-      = link_to "#", class: 'btn btn-primary btn-raised btn-lg', data: {target: "#addSubscriptionModal", toggle: "modal"} do
-        %i.material-icons email
-        = "#{t('layout.subscribe_to', site_name: @current_storytime_site.title)}"
+.separator
+.subscribe-line
+  .container
+    .text-center
+      = link_to t('defaults.subscribe'), "#", class: 'btn btn-danger btn-lg', data: {target: "#addSubscriptionModal", toggle: "modal"}

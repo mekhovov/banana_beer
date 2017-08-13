@@ -1,4 +1,15 @@
 
+//========================= Override Storytime =========================
+
+.storytime {
+  .form-control {
+    border-radius: 4px;
+  }
+  #storytime-app-menu-toggle {
+    z-index: 100000;
+  }
+}
+
 //========================= Common =========================
 
 .translation_missing {
@@ -14,6 +25,12 @@
 .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
   background: transparent;
   border: none;
+}
+
+.page-header {
+  &.page-header-very-small {
+      min-height: 30vh !important;
+      max-height: 300px;  }
 }
 
 .header {
@@ -54,12 +71,21 @@ ul.tags {
 
 //========================= Home Page =========================
 
+.recent_posts_image_container {
+  height: 300px;
+  overflow: hidden;
+}
 .recent_posts_image {
-  width: 90%;
+  width: 100%;
   height: auto;
 }
 
 //========================= Blog Page =========================
+
+.post_list_image_container {
+  height: 170px;
+  overflow: hidden;
+}
 
 .post_list_image {
   width: 100%;
@@ -75,19 +101,7 @@ ul.tags {
 //========================= Sections =========================
 
 .section-home {
-    padding: 10px 0;
-}
-
-.section-subscribe,
-.section-post,
-.section-blog {
-    background: #EEEEEE;
-}
-
-.section-post {
-  .container {
-    margin-top: -220px
-  }
+  padding: 0;
 }
 
 //========================= Title Headers =========================

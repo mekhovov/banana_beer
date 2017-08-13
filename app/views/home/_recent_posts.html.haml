@@ -1,23 +1,32 @@
-.section.text-center.section-recent-posts
-  .col-md-8.col-md-offset-2
-    %h2.text-center.title
-      =t('defaults.recent_posts')
+.blog-2.section.section-gray
+  .container
     .row
-      - recent_posts.each do |post|
-        .col-md-4.blog-post
-          = link_to storytime.post_path(post) do
-            = image_tag post_primary_or_default_image_url(post), class: "img-rounded recent_posts_image"
+      .col-md-10.offset-md-1
+        %h2.title
+          =t('defaults.recent_posts')
           %br
-          %br
-          %h4.title
-            = link_to post.title, storytime.post_path(post)
-            %small
-              = post.try(:category_name)
-          %p
-            = post.excerpt.html_safe
-          %p
-            = render 'storytime/blogs/tags', post: post
-          %p
-            = link_to t('defaults.continue_reading'), storytime.post_path(post), class: 'nowrap'
-
-  = render partial: 'shared/read_all_posts'
+        .row
+          - recent_posts.each do |post|
+            .col-md-4
+              .card.card-blog
+                .card-image
+                  = link_to storytime.post_path(post) do
+                    = image_tag post_primary_or_default_image_url(post), class: "img img-raised"
+                .card-block
+                  %h6.card-category.text-info
+                    = post.try(:category_name)
+                  .card-title
+                    %h5
+                      = link_to post.title, storytime.post_path(post)
+                  %p.card-description
+                    = post.excerpt.html_safe
+                    %p
+                      = link_to storytime.post_path(post), class: 'btn btn-link btn-default btn-move-right pull-right nowrap' do
+                        = t('defaults.read_more')
+                        %i.fa.fa-angle-right
+                      %br
+                      %br
+                  %hr
+                  .card-footer
+                    = render 'storytime/blogs/tags', post: post
+        = render partial: 'shared/read_all_posts'

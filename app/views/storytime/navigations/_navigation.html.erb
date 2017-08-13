@@ -1,0 +1,5 @@
+<% navigation.links.each do |link| %>
+  <li class="nav-item">
+    <%= link_to link.text, (link.url.present? ? link.url : storytime.page_path(link.linkable)), class: "nav-link", 'data-scroll': "true" %>
+  </li>
+<% end %>

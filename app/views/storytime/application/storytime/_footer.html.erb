@@ -1,12 +1,50 @@
-<footer class="footer">
+<div class="separator"></div>
+
+<footer class="footer footer-black footer-big">
     <div class="container">
-        <nav class="pull-left">
-    <ul>
-      <%= render_main_menu %>
-    </ul>
-        </nav>
-        <div class="copyright pull-right">
-            <%= Time.current.year %>, made with <i class="fa fa-heart heart"></i> by Alex
+        <div class="row">
+            <div class="col-md-3 text-center col-sm-3 col-xs-12">
+                <h4>
+                    <%= @current_storytime_site.title %>
+                </h4>
+                <div class="social-area">
+                    <a class="btn btn-just-icon btn-round btn-facebook" target="_blank" href="https://www.facebook.com/alex.mekhovov">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-just-icon btn-round btn-linkedin" target="_blank" href="https://www.linkedin.com/in/mekhovov/">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-just-icon btn-round btn-github" target="_blank" href="https://github.com/mekhovov">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-just-icon btn-round btn-instagram" target="_blank" href="https://www.instagram.com/mekhovov/">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-7 offset-md-2 col-sm-8">
+                <div class="links">
+                    <ul>
+                        <%= render_main_menu %>
+                        <%= render partial: 'shared/user_menu' %>
+                    </ul>
+                    <hr />
+                    <div class="copyright">
+                        <div class="pull-left">
+                            made with <i class="fa fa-heart heart"></i> by Alex
+                        </div>
+                        <div class="pull-right">
+                            <ul>
+                                <li>
+                                    <%= link_to t('defaults.subscribe'), "#", data: {target: "#addSubscriptionModal", toggle: "modal"} %>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </footer>

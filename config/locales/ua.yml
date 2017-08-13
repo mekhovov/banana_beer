@@ -3,8 +3,7 @@ ua:
     title: Qwerty
   hello: Привіт світ
   defaults:
-    read_more: читати далі ➜
-    continue_reading: продовжити читати →
+    read_more: читати далі
     recent_posts: Останні Записи в Блозі
     sign_in: Увійти
     sign_out: Вийти
@@ -14,7 +13,7 @@ ua:
     add_comment: Додати Комментар
     categories: Категорії
     tags: Тегі
-    next_post: "%{title} →"
-    previous_post: "← %{title}"
     dark: Темно
     light: Світло
+    user_menu: Користувач
+    subscribe: Підписатися

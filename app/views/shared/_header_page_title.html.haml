@@ -1,8 +1,5 @@
-%div{ class: "header #{header_page_title_class}", style: title_css_style }
-  .container
-    .row
-      .col-md-8.col-md-offset-2
-        %br
-        %br
-        %h1.title.text-center.page_title
-          = page_title unless hide_title?
+.page-header{ class: "header #{header_page_title_class}", style: title_css_style }
+  %div{ class: "#{page_filter_class}" }
+  .content-center
+    .container
+      = page_title unless hide_title?
