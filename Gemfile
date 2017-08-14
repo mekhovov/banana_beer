@@ -56,5 +56,5 @@ end
 
 # storytime CMS https://github.com/CultivateLabs/storytime
 # use forms for storytime and leather to support bootstrap 4
-gem 'storytime', '~> 2.1', :git => "git@github.com:mekhovov/storytime.git", :branch => 'master'
-gem 'leather', '>= 3.5', :git => "git@github.com:mekhovov/leather.git", :branch => 'master'
+gem 'storytime', '~> 2.1', :git => "https://github.com/mekhovov/storytime.git", :branch => 'master'
+gem 'leather', '>= 3.5', :git => "https://github.com/mekhovov/leather.git", :branch => 'master'

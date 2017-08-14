@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:mekhovov/leather.git
+  remote: https://github.com/mekhovov/leather.git
   revision: 5f0f0cc60bdb8fa33921ef996aefcbfa8a13ff15
   branch: master
   specs:
@@ -11,7 +11,7 @@ GIT
       rails (>= 4.0)
 
 GIT
-  remote: git@github.com:mekhovov/storytime.git
+  remote: https://github.com/mekhovov/storytime.git
   revision: 74868b76294b11609b8a8d5891952bc11aa07d0d
   branch: master
   specs:
