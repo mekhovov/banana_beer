@@ -14,7 +14,7 @@
                     = image_tag post_primary_or_default_image_url(post), class: "img img-raised"
                 .card-block
                   %h6.card-category.text-info
-                    = post.try(:category_name)
+                    = render_category(post.post_category)
                   .card-title
                     %h5
                       = link_to post.title, storytime.post_path(post)

@@ -10,6 +10,69 @@
   }
 }
 
+.homepage .page-header .storytime-snippet a {
+  text-decoration: underline;
+}
+
+//========================= Override Paper-Kit =========================
+
+.card-category i.fa:before {
+  padding-right: 5px;
+}
+
+.posts .article .card-category i {
+  display: inline;
+}
+
+.blogs .features-blog {
+  padding: 10px 0;
+  .container [class*=col-]{
+    border: 1px solid rgba(200,200,200,.35);
+    border-top: 0;
+    border-left: 0;
+
+    &:last-child{
+        border-right: 0;
+    }
+  }
+  .bottom-line [class*=col-]{
+      border-bottom: 0;
+  }
+  .info {
+    color: $dark-gray;
+  }
+  .development.active .info, .development:hover .info {
+    color: $info-color !important;
+    .title {
+      color: $info-color !important;
+    }
+  }
+  .life.active .info, .life:hover .info {
+    color: $danger-color !important;
+    .title {
+      color: $danger-color !important;
+    }
+  }
+  .photo.active .info, .photo:hover .info {
+    color: $warning-color !important;
+    .title {
+      color: $warning-color !important;
+    }
+  }
+  .travel.active .info, .travel:hover .info {
+    color: $success-color !important;
+    .title {
+      color: $success-color !important;
+    }
+  }
+
+  a.active, a:hover {
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+
 //========================= Common =========================
 
 .translation_missing {
@@ -29,8 +92,9 @@
 
 .page-header {
   &.page-header-very-small {
-      min-height: 30vh !important;
-      max-height: 300px;  }
+    min-height: 30vh !important;
+    max-height: 300px;
+  }
 }
 
 .header {

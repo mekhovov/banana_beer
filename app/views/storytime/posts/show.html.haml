@@ -11,8 +11,7 @@
     .article
       .row
         .col-md-10.offset-md-1
-          %h4.text-center.title-uppercase
-            = @post.try(:category_name)
+          = render_category(@post.post_category, :h4, 'text-center title-uppercase')
           %h6.text-center
             = @post.published_at.strftime("%b %d, %Y")
 

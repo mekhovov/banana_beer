@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705202250) do
+ActiveRecord::Schema.define(version: 20170816163816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 20170705202250) do
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
+    t.string   "category_css_class"
+    t.string   "icon_css_class"
+    t.text     "description"
   end
 
   create_table "storytime_actions", force: :cascade do |t|

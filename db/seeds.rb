@@ -7,14 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 categories = [
-  { name: 'Dev', slug: 'dev'},
-  { name: 'Projects', slug: 'project'},
-  { name: 'Presentations', slug: 'presentation'},
-  { name: 'Talks', slug: 'talk'},
-  { name: 'Life', slug: 'life'},
-  { name: 'Travel', slug: 'travel'},
-  { name: 'Photos', slug: 'photo'},
-  { name: 'Unsorted', slug: 'unsorted'}
+  { name: 'Development',  slug: 'development', position: 1,   category_css_class: 'text-info',   icon_css_class: 'fa-laptop'},
+  { name: 'Life',       slug: 'life',      position: 2,   category_css_class: 'text-danger',  icon_css_class: 'fa-heart'},
+  { name: 'Travel',     slug: 'travel',     position: 3,    category_css_class: 'text-success', icon_css_class: 'fa-suitcase'},
+  { name: 'Photography',  slug: 'photo',     position: 4,   category_css_class: 'text-warning',   icon_css_class: 'fa-camera'},
+  { name: 'Unsorted',   slug: 'unsorted',    position: 5,   category_css_class: 'text-default',   icon_css_class: 'fa-question'},
 ]
 
 categories.each do |category_params|

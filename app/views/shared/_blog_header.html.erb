@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 text-center">
+      <h2 class="title">
+        <%= page_title %>
+      </h2>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="features-blog" >
+  <div class="container">
+    <div class="row bottom-line">
+        <% PostCategory.order_by_position.without_unsorted.each do |category| %>
+          <div class="col-6 col-md-3 col-sm-6">
+            <%= link_to storytime.blog_path(category: category.slug), class: "#{category.slug} #{'active' if params[:category] == category.slug}" do %>
+                <div class="info">
+                  <div class="icon">
+                    <i class="fa <%= category.icon_css_class %>" aria-hidden="true"></i>
+                  </div>
+                  <h5 class="title">
+                    <%= category.name %>
+                  </h5>
+                  <p>
+                    <%= category.description %>
+                  </p>
+                </div>
+            <% end %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+
+
+

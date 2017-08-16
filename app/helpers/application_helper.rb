@@ -20,6 +20,17 @@ module ApplicationHelper
     end
   end
 
+  def render_category(category, h = :h6, additional_css_classes = nil)
+    return '' if category.nil?
+    content_tag :a, href: "/blog?category=#{category.slug}" do # TODO: try storytime.blog_path
+      content_tag h, class: "card-category #{category.category_css_class} #{additional_css_classes}" do
+        content_tag :i, class: "fa #{category.icon_css_class}" do
+          category.name
+        end
+      end
+    end
+  end
+
   def recent_posts
     MyPost.published.order(published_at: :desc).limit(3)
   end
@@ -52,7 +63,7 @@ module ApplicationHelper
   end
 
   def hide_title?
-    current_page_slug.nil?
+    current_page_slug.nil? || %w(blog).include?(current_page_slug)
   end
 
   def parallax_colors

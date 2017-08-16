@@ -1,5 +1,7 @@
 <% content_for :head, auto_discovery_link_tag(:atom, action: :show, id: @page.id, format: "atom") %>
 
+<%= render :partial => "shared/blog_header" %>
+
 <div class="section section-white section-blog">
   <div class="container">
     <div class="row">
