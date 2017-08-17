@@ -7,5 +7,6 @@ class MyPost < Storytime::BlogPost
   scope :previous_post, -> (current_post) { published.order(published_at: :desc).where('id < ?', current_post.id) }
   scope :next_post,    -> (current_post) { published.order(published_at: :desc).where('id > ?', current_post.id) }
   scope :by_category,  -> (category) { joins(:post_category).where(post_category: category) }
+  scope :order_by_updated,  -> { order(updated_at: :desc) }
 
 end
