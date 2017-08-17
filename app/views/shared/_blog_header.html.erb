@@ -14,15 +14,15 @@
   <div class="container">
     <div class="row bottom-line">
         <% PostCategory.order_by_position.without_unsorted.each do |category| %>
-          <div class="col-6 col-md-3 col-sm-6">
+          <div class="col-3 col-md-3 col-sm-3">
             <%= link_to storytime.blog_path(category: category.slug), class: "#{category.slug} #{'active' if params[:category] == category.slug}" do %>
                 <div class="info">
                   <div class="icon">
                     <i class="fa <%= category.icon_css_class %>" aria-hidden="true"></i>
                   </div>
-                  <h5 class="title">
+                  <h6 class="title">
                     <%= category.name %>
-                  </h5>
+                  </h6>
                   <p>
                     <%= category.description %>
                   </p>

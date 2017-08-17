@@ -36,10 +36,14 @@
     }
   }
   .bottom-line [class*=col-]{
-      border-bottom: 0;
+    border-bottom: 0;
   }
   .info {
     color: $dark-gray;
+    padding: 0px;
+    h6 {
+      font-weight: normal;
+    }
   }
   .development.active .info, .development:hover .info {
     color: $info-color !important;
