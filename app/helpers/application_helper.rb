@@ -32,7 +32,7 @@ module ApplicationHelper
   end
 
   def recent_posts
-    MyPost.published.order(published_at: :desc).limit(3)
+    MyPost.published.order_by_updated.limit(3)
   end
 
   def current_page_slug
