@@ -16,23 +16,20 @@ module ApplicationHelper
 
   def render_admin_menu_item
     if current_user&.admin?
-      link_to t('defaults.admin'), storytime_admin_path, target: '_blank', class: 'nav-link', 'data-scroll': 'true'
+      # TODO: make path in routes for admin page
+      link_to t('defaults.admin'), '/storytime', target: '_blank', class: 'nav-link', 'data-scroll': 'true'
     end
   end
 
   def render_category(category, h = :h6, additional_css_classes = nil)
     return '' if category.nil?
-    content_tag :a, href: "/blog?category=#{category.slug}" do # TODO: try storytime.blog_path
+    content_tag :a, href: "/#{category.slug}" do # TODO: try storytime.blog_path
       content_tag h, class: "card-category #{category.category_css_class} #{additional_css_classes}" do
         content_tag :i, class: "fa #{category.icon_css_class}" do
           category.name
         end
       end
     end
-  end
-
-  def recent_posts
-    MyPost.published.order_by_updated.limit(3)
   end
 
   def current_page_slug

@@ -1,0 +1,22 @@
+<!-- TODO: fix -->
+<%# content_for :head, auto_discovery_link_tag(:atom, action: :show, id: @page.id, format: "atom") %>
+
+<%= render :partial => "shared/blog_header" %>
+
+<div class="section section-white section-blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <%= render @posts %>
+        <%= paginate @posts, param_name: "page_number" %>
+      </div>
+
+      <div class="col-md-2">
+        <div class="">
+          <%= render partial: '/shared/all_tags' %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

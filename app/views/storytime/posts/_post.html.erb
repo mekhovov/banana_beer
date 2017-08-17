@@ -26,7 +26,7 @@
           <% end %>
         </p>
         <p>
-          Updated: <%= post.updated_at.strftime("%b %d, %Y") %>
+          <%= t('defaults.updated') %> <%= post.updated_at.strftime("%b %d, %Y") %>
         </p>
         <p class="tags">
           <%= render 'storytime/posts/tags', post: post %>

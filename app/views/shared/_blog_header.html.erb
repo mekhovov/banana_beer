@@ -13,9 +13,10 @@
 <div class="features-blog" >
   <div class="container">
     <div class="row bottom-line">
-        <% PostCategory.order_by_position.without_unsorted.each do |category| %>
+        <% PostCategory.blog_categories.order_by_position.each do |category| %>
           <div class="col-3 col-md-3 col-sm-3">
-            <%= link_to storytime.blog_path(category: category.slug), class: "#{category.slug} #{'active' if params[:category] == category.slug}" do %>
+            <!-- # TODO: make better routes -->
+            <%= link_to "/#{category.slug}", class: "#{category.slug} #{'active' if params[:action] == category.slug}" do %>
                 <div class="info">
                   <div class="icon">
                     <i class="fa <%= category.icon_css_class %>" aria-hidden="true"></i>

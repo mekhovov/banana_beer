@@ -10,7 +10,8 @@
   }
 }
 
-.homepage .page-header .storytime-snippet a {
+.homepage .page-header .storytime-snippet a,
+.home-controller .page-header .storytime-snippet a {
   text-decoration: underline;
 }
 
@@ -24,7 +25,8 @@
   display: inline;
 }
 
-.blogs .features-blog {
+.blogs .features-blog,
+.blog_categories .features-blog {
   padding: 10px 0;
   .container [class*=col-]{
     border: 1px solid rgba(200,200,200,.35);

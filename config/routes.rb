@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  root 'home#index'
+
+  # post categories
+  get '/development' => 'blog_categories#development', as: :blog_category_development
+  get '/life' => 'blog_categories#life', as: :blog_category_life
+  get '/photo' => 'blog_categories#photo', as: :blog_category_photo
+  get '/travel' => 'blog_categories#travel', as: :blog_category_travel
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
