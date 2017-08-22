@@ -91,6 +91,19 @@
     content: " ❌ ";
 }
 
+.small_logo {
+  height: 18px;
+  padding: 0;
+}
+
+.footer-big h4 a.logo_link {
+  color: $white;
+  .small_logo_footer {
+    height: 24px;
+    padding: 0;
+  }
+}
+
 .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
   background: transparent;
   border: none;

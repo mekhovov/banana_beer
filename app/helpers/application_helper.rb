@@ -127,4 +127,17 @@ module ApplicationHelper
     MyPost.next_post(post).last
   end
 
+  def render_logo_link(options)
+    title = if @current_storytime_site.title =~ /<logo>/
+      image = image_tag(options.fetch(:image, 'logo.svg'), class: options.fetch(:image_css_class, 'small_logo'))
+      @current_storytime_site.title.gsub(/<logo>/, image).html_safe
+    else
+      @current_storytime_site.title
+    end
+
+    link_to root_path, class: options[:link_css_class] do
+      title
+    end
+  end
+
 end
