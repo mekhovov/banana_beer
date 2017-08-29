@@ -4,19 +4,21 @@
 <%= render :partial => "shared/blog_header" %>
 
 <div class="section section-white section-blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10">
-        <%= render @posts %>
+  <div class="blog-4">
+    <div class="container">
+      <div class="row">
+        <% @posts.each do |post| %>
+          <%= render partial: 'post_travel', locals: { post: post } %>
+        <% end %>
         <%= paginate @posts, param_name: "page_number" %>
       </div>
-
-      <div class="col-md-2">
-        <div class="">
-          <%= render partial: '/shared/all_tags' %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="">
+            <%= render partial: '/shared/all_tags' %>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
