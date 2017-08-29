@@ -104,9 +104,20 @@
   }
 }
 
-.search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
-  background: transparent;
-  border: none;
+.navbar-transparent {
+  .search_form {
+    .seacrh_field {
+      background: transparent;
+      color: $white;
+    }
+  }
+}
+
+.search_form {
+  .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
+    background: transparent;
+    border: none;
+  }
 }
 
 .page-header {
