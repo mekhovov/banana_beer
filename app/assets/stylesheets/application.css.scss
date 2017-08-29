@@ -17,12 +17,13 @@
 // PhotoSwipe images path
 $pswp__assets-path: asset-path('/assets/images/photo_swipe/') !default; // path to skin assets folder (preloader, PNG and SVG sprite)
 
-@import "lib/bootstrap_3_variables";
-@import "bootstrap";
 @import 'fonts';
-@import 'lib/nucleo-icons';
+@import "bootstrap3/bootstrap_3_variables";
+@import "bootstrap3/_glyphicons"; // https://getbootstrap.com/docs/3.3/components/#glyphicons
+@import "bootstrap";
+@import 'nucleo-icons'; // http://demos.creative-tim.com/paper-kit-2-pro/nucleo-icons-demo.html
 @import 'storytime_custom';
-@import 'lib/paper-kit';
+@import 'paper-kit'; // http://demos.creative-tim.com/paper-kit-2-pro/presentation.html
 @import 'colors_and_backgrounds';
 @import 'common';
 

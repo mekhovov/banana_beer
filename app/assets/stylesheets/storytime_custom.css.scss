@@ -75,7 +75,7 @@ $st-headings-font-weight: 300;
   @import "storytime/scroll-panels";
   @import "storytime/dashboard_overrides";
 
-  @import 'lib/paper-kit'; // override storytime's styles
+  @import 'paper-kit'; // override storytime's styles
 }
 
 @import "storytime/snippets";
