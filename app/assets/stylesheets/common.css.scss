@@ -91,6 +91,11 @@
     content: " ❌ ";
 }
 
+.img-not-rounded{
+  transition: opacity 0.5s ease 0s;
+  max-width: 100%;
+}
+
 .small_logo {
   height: 18px;
   padding: 0;
