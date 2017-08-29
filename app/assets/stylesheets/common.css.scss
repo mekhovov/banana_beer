@@ -115,13 +115,23 @@
       background: transparent;
       color: $white;
     }
+    .search_nav_button i {
+      color: $white;
+    }
   }
 }
 
 .search_form {
+  .seacrh_field {
+    padding-right: 35px;
+  }
   .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
     background: transparent;
     border: none;
+    margin-left: -40px;
+    i {
+      color: $default-color;
+    }
   }
 }
 
