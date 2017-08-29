@@ -15,11 +15,12 @@
           %h6.text-center
             = @post.published_at.strftime("%b %d, %Y")
 
-
       .row
         .col-md-8.offset-md-2
-          %a{ href: "javascrip: void(0);" }
-            .card{ 'data-radius': 'none', style: "background-image: url('#{ post_primary_or_default_image_url(@post) }');" }
+          .my-gallery{ itemtype: "http://schema.org/ImageGallery" }
+            %figure.col-md-12.gallery-item{ itemprop: "associatedMedia", itemtype: "http://schema.org/ImageObject" }
+              = link_to post_primary_or_default_image_url(@post), itemprop: "contentUrl", 'data-size': post_image_dimensions(@post) do
+                = image_tag post_primary_or_default_image_url(@post), class: "small-horizontal-image img-rounded img-responsive", itemprop: "thumbnail",  alt: @post.title
 
           .article-content
             = @post.content.html_safe
