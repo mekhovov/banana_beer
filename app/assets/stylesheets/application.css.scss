@@ -14,6 +14,9 @@
  *= require_self
  */
 
+// PhotoSwipe images path
+$pswp__assets-path: asset-path('/assets/images/photo_swipe/') !default; // path to skin assets folder (preloader, PNG and SVG sprite)
+
 @import "lib/bootstrap_3_variables";
 @import "bootstrap";
 @import 'fonts';

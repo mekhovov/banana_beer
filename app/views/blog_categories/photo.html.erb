@@ -6,11 +6,13 @@
 <div class="section section-white section-blog">
   <div class="blog-4">
     <div class="container">
-      <div class="row">
-        <% @posts.each do |post| %>
-          <%= render partial: 'post_photo', locals: { post: post } %>
-        <% end %>
-        <%= paginate @posts, param_name: "page_number" %>
+      <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="row">
+          <% @posts.each do |post| %>
+            <%= render partial: 'post_photo', locals: { post: post } %>
+          <% end %>
+          <%= paginate @posts, param_name: "page_number" %>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">

@@ -115,6 +115,18 @@ module ApplicationHelper
     post_primary_image_url(post) || image_url('default_post_image_placeholder.svg')
   end
 
+  def image_dimensions(image)
+    if image
+      "#{image.width}x#{image&.height}"
+    else
+      '600x400'
+    end
+  end
+
+  def post_image_dimensions(post)
+    image_dimensions(post.featured_media&.file)
+  end
+
   def blog_slug
     "/#{Storytime::Blog.find_by(title: 'Blog')&.slug}"
   end

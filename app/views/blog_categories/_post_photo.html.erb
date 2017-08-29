@@ -1,20 +1,10 @@
-<div class="col-md-6">
-  <div class="card card-plain card-blog text-center">
-    <div class="card-image">
-        <%= link_to storytime.post_path(post) do %>
-          <%= image_tag post_primary_or_default_image_url(post), class: "img img-raised" %>
-        <% end %>
-    </div>
-    <div class="card-block">
-        <h3 class="card-title">
-          <%= link_to post.title, storytime.post_path(post) %>
-        </h3>
-        <p class="card-description">
-          <%= post.excerpt %>
-        </p>
-        <p class="tags">
-          <%= render 'storytime/posts/tags', post: post %>
-        </p>
-    </div>
-  </div>
-</div>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="col-md-6 col-sm-4 gallery-item">
+
+  <%= link_to post_primary_or_default_image_url(post), itemprop: "contentUrl", 'data-size': post_image_dimensions(post) do %>
+    <%= image_tag post_primary_or_default_image_url(post), class: "small-horizontal-image img-rounded img-responsive", itemprop: "thumbnail",  alt: post.title %>
+  <% end %>
+
+  <figcaption itemprop="caption description" class="gallery-caption">
+    <%= post.title %>
+  </figcaption>
+</figure>
