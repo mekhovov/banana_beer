@@ -53,21 +53,7 @@ Storytime.configure do |config|
 
   # more info: https://github.com/CultivateLabs/storytime/wiki/Sanitizing-HTML-Content
   config.post_sanitizer = Proc.new do |draft_content|
-    if Rails::VERSION::MINOR <= 1
-      white_list_sanitizer = HTML::WhiteListSanitizer.new
-      tags = white_list_sanitizer.allowed_tags
-      attributes = white_list_sanitizer.allowed_attributes
-    else
-      white_list_sanitizer = Rails::Html::WhiteListSanitizer.new
-      tags = Loofah::HTML5::WhiteList::ALLOWED_ELEMENTS_WITH_LIBXML2
-      attributes = Loofah::HTML5::WhiteList::ALLOWED_ATTRIBUTES
-    end
-
-    # Add any additional tags or attributes to tags/attributes Sets here.
-    tags.add("iframe")
-    attributes.merge(["frameborder", "allowfullscreen"])
-
-    white_list_sanitizer.sanitize(draft_content, tags: tags, attributes: attributes)
+    draft_content
   end
 
   # Enable Disqus comments using your forum's shortname,
