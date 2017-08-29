@@ -19,7 +19,7 @@
             <%= link_to "/#{category.slug}", class: "#{category.slug} #{'active' if params[:action] == category.slug}" do %>
                 <div class="info">
                   <div class="icon">
-                    <i class="fa <%= category.icon_css_class %>" aria-hidden="true"></i>
+                    <i class="<%= category.icon_css_class %>" aria-hidden="true"></i>
                   </div>
                   <h6 class="title">
                     <%= category.name %>

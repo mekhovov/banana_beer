@@ -25,7 +25,7 @@ module ApplicationHelper
     return '' if category.nil?
     content_tag :a, href: "/#{category.slug}" do # TODO: try storytime.blog_path
       content_tag h, class: "card-category #{category.category_css_class} #{additional_css_classes}" do
-        content_tag :i, class: "fa #{category.icon_css_class}" do
+        content_tag :i, class: category.icon_css_class do
           category.name
         end
       end
