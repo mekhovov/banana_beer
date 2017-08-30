@@ -146,8 +146,10 @@ module ApplicationHelper
   end
 
   def image_dimensions(image)
-    if image
-      "#{image.width}x#{image&.height}"
+    if image && image.model&.width && image.model&.height
+      "#{image.model.width}x#{image.model.height}"
+    elsif image
+      "#{image.width}x#{image.height}"
     else
       '600x400'
     end

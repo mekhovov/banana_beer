@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816163816) do
+ActiveRecord::Schema.define(version: 20170830141921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,8 @@ ActiveRecord::Schema.define(version: 20170816163816) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "site_id"
+    t.integer  "width"
+    t.integer  "height"
   end
 
   add_index "storytime_media", ["site_id"], name: "index_storytime_media_on_site_id", using: :btree
