@@ -183,3 +183,148 @@ $navbar-inverse-brand-hover-bg:             transparent !default;
 $navbar-inverse-toggle-hover-bg:            #333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 $navbar-inverse-toggle-border-color:        #333 !default;
+
+
+
+
+
+//== Navs
+//
+//##
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+
+// //=== Shared nav styles
+$nav-link-padding:                          10px 15px !default;
+
+$nav-link-hover-bg:                         $gray-lighter !default;
+
+$nav-disabled-link-color:                   $gray-light !default;
+$nav-disabled-link-hover-color:             $gray-light !default;
+
+
+$cursor-disabled:                not-allowed !default;
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$link-color:            $brand-primary !default;
+
+
+
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+@mixin nav-divider($color: #e5e5e5) {
+  height: 1px;
+  margin: (($line-height-computed / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+
+#dashboard-nav {
+  .nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+    @include clearfix;
+
+    > li {
+      position: relative;
+      display: block;
+
+      > a {
+        position: relative;
+        display: block;
+        padding: $nav-link-padding;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: $nav-link-hover-bg;
+        }
+      }
+
+      // Disabled state sets text to gray and nukes hover/tab effects
+      &.disabled > a {
+        color: $nav-disabled-link-color;
+
+        &:hover,
+        &:focus {
+          color: $nav-disabled-link-hover-color;
+          text-decoration: none;
+          background-color: transparent;
+          cursor: $cursor-disabled;
+        }
+      }
+    }
+
+    // Open dropdowns
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $nav-link-hover-bg;
+        border-color: $link-color;
+      }
+    }
+
+    // Nav dividers (deprecated with v3.0.1)
+    //
+    // This should have been removed in v3 with the dropping of `.nav-list`, but
+    // we missed it. We don't currently support this anywhere, but in the interest
+    // of maintaining backward compatibility in case you use it, it's deprecated.
+    .nav-divider {
+      @include nav-divider;
+    }
+
+    // Prevent IE8 from misplacing imgs
+    //
+    // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+    > li > a > img {
+      max-width: none;
+    }
+  }
+}
+
+#dashboard-nav {
+ .nav {
+    display: block;
+  }
+}
+
+.modal-dialog {
+  a.storytime-modal-trigger {
+    text-align: center;
+  }
+  button.close {
+    margin-left: 20px;
+  }
+}
