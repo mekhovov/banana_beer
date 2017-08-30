@@ -15,6 +15,29 @@
   text-decoration: underline;
 }
 
+.full-screen.login .card-register .register-form {
+  .checkbox input[type="checkbox"],
+  .radio input[type="radio"] {
+    opacity: 100;
+  }
+}
+
+.full-screen.register .card-register .register-form {
+  .help-block {
+    color: $gray-light
+  }
+  .has-error {
+    color: $red;
+    .form-control {
+      border: 1px solid $red !important;
+    }
+  }
+  .checkbox input[type="checkbox"],
+  .radio input[type="radio"] {
+    opacity: 100;
+  }
+}
+
 //========================= Override Paper-Kit =========================
 
 .card-category h6 i {

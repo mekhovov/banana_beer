@@ -1,17 +1,36 @@
-<h2>Sign up</h2>
+<div class="wrapper full-screen register">
+  <div class="page-header" style="background-image: url('<%= image_path('landing_page_bg.jpg') %>');">
+  <div class="filter"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 push-md-4 col-sm-5 push-sm-3 col-xs-12">
+          <div class="card card-register">
+            <h3 class="card-title text-center">
+              <%= t('defaults.sign_up') %>
+            </h3>
+            <br>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'register-form'}) do |f| %>
+              <%= f.error_notification %>
+              <div class="form-inputs">
+                <%= f.input :email, required: true, autofocus: true, class: 'form-control', label: false, placeholder: t('defaults.email') %>
+                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: 'form-control', label: false, placeholder: t('defaults.password') %>
+                <%= f.input :password_confirmation, required: true, class: 'form-control', label: false, placeholder: t('defaults.confirm_password') %>
+              </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+              <div class="form-actions">
+                <%= f.button :submit, t('defaults.sign_up'), class: 'btn btn-block btn-round' %>
+              </div>
+            <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+            <div class="login">
+              <hr>
+              <p>
+                <%= render "users/shared/links" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

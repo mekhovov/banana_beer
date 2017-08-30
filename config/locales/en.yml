@@ -18,3 +18,10 @@ en:
     user_menu: User
     subscribe: Subscribe
     updated: 'Updated:'
+    log_in: Log In
+    sign_up: Sign Up
+    email: Email
+    password: Password
+    confirm_password: Confirm Password
+    forgot_password: Forgot your password?
+    reset_password: Reset Password

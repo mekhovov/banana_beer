@@ -1,15 +1,36 @@
-<h2>Log in</h2>
+<div class="wrapper full-screen login">
+  <div class="page-header" style="background-image: url('<%= image_path('landing_page_bg.jpg') %>');">
+  <div class="filter"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 push-md-4 col-sm-5 push-sm-3 col-xs-12">
+          <div class="card card-register">
+            <h3 class="card-title text-center">
+              <%= t('defaults.log_in') %>
+            </h3>
+            <br>
+            <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'register-form' }) do |f| %>
+              <%= f.error_notification %>
+              <div class="form-inputs">
+                <%= f.input :email, required: false, autofocus: true, class: 'form-control', label: false, placeholder: t('defaults.email') %>
+                <%= f.input :password, required: false, class: 'form-control', label: false, placeholder: t('defaults.password') %>
+                <%= f.input :remember_me, as: :boolean, class: 'checkbox' if devise_mapping.rememberable? %>
+              </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              <div class="form-actions">
+                <%= f.button :submit, t('defaults.log_in'), class: 'btn btn-block btn-round btn-neutral' %>
+              </div>
+            <% end %>
+
+            <div class="login">
+              <hr>
+              <p>
+                <%= render "users/shared/links" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>
