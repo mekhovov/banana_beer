@@ -17,7 +17,7 @@ module ApplicationHelper
   def render_admin_menu_item
     if current_user&.admin?
       # TODO: make path in routes for admin page
-      link_to t('defaults.admin'), '/storytime', target: '_blank', class: 'nav-link', 'data-scroll': 'true'
+      link_to t('defaults.admin'), '/admin', target: '_blank', class: 'nav-link', 'data-scroll': 'true'
     end
   end
 
