@@ -25,3 +25,4 @@ ua:
     confirm_password: Підтвердження Пароля
     forgot_password: Забули Пароль?
     reset_password: Оновити Пароль
+    not_authorized: Недостатньо прав для перегляду цієї сторінки

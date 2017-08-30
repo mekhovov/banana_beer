@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
     attrs
   end
 
+  def authenticate_admin_user!
+    if !current_user&.admin?
+      flash[:error] = t('defaults.not_authorized')
+      redirect_to(request.referrer || "/")
+    end
+  end
+
 end

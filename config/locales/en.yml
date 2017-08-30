@@ -25,3 +25,4 @@ en:
     confirm_password: Confirm Password
     forgot_password: Forgot your password?
     reset_password: Reset Password
+    not_authorized: You are not authorized to perform this action

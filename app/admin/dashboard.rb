@@ -18,8 +18,9 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Recent Users" do
           ul do
             User.limit(10).map do |user|
-              link_to(user.email, admin_user_path(user)) +
-              " | #{time_ago_in_words(user.updated_at)} ago"
+              li link_to(user.email, admin_user_path(user)) +
+              " | #{user.sign_in_count} times" +
+              " | #{time_ago_in_words(user.last_sign_in_at)} ago"
             end.join(' ').html_safe
           end
         end
