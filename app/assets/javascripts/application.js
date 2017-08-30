@@ -26,4 +26,4 @@
 //= require storytime/application.js
 //= require photoswipe.min
 //= require photoswipe-ui-default.min
-//= require_tree .
+//= require photoswipe-init-gallery
