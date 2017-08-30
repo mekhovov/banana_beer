@@ -4,6 +4,6 @@
 
 <div class="item-extra chip-list condensed">
   <% tag_cloud Storytime::Post.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%= link_to "##{tag.name}", storytime.blog_path(@page, tag: tag.name), class: "chip  tag #{css_class}" %>
+    <%= link_to "##{tag.name}", storytime.blog_path((@page || 'blog'), tag: tag.name), class: "chip tag #{css_class}" %>
   <% end %>
 </div>

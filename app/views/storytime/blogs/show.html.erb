@@ -1,4 +1,4 @@
-<% content_for :head, auto_discovery_link_tag(:atom, action: :show, id: @page.id, format: "atom") %>
+<% content_for :head, auto_discovery_link_tag(:atom, action: :show, id: @page.id, format: "atom") if @page %>
 
 <%= render :partial => "shared/blog_header" %>
 

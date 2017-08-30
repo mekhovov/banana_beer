@@ -9,7 +9,7 @@
       <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
         <div class="row">
           <% @posts.each do |post| %>
-            <%= render partial: 'post_photo', locals: { post: post } %>
+            <%= render partial: '/storytime/banana-beer/blogs/post_photo', locals: { post: post } %>
           <% end %>
           <%= paginate @posts, param_name: "page_number" %>
         </div>

@@ -32,6 +32,7 @@
   display: inline;
 }
 
+.my_blog .features-blog,
 .blogs .features-blog,
 .blog_categories .features-blog {
   padding: 10px 0;
@@ -54,13 +55,13 @@
       font-weight: normal;
     }
   }
-  .development.active .info, .development:hover .info {
+  .it.active .info, .it:hover .info {
     color: $info-color !important;
     .title {
       color: $info-color !important;
     }
   }
-  .life.active .info, .life:hover .info {
+  .life_and_fun.active .info, .life_and_fun:hover .info {
     color: $danger-color !important;
     .title {
       color: $danger-color !important;

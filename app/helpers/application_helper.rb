@@ -21,12 +21,12 @@ module ApplicationHelper
     end
   end
 
-  def render_category(category, h = :h6, additional_css_classes = nil)
-    return '' if category.nil?
-    content_tag :a, href: "/#{category.slug}" do # TODO: try storytime.blog_path
-      content_tag h, class: "card-category #{category.category_css_class} #{additional_css_classes}" do
-        content_tag :i, class: category.icon_css_class do
-          category.name
+  def render_blog_name_and_icon(blog, h = :h6, additional_css_classes = nil)
+    return '' if blog.nil?
+    content_tag :a, href: "/#{blog.slug}" do
+      content_tag h, class: "card-category #{get_blog_css_class(blog)} #{additional_css_classes}" do
+        content_tag :i, class: get_blog_icon_css_class(blog) do
+          blog.title
         end
       end
     end
@@ -60,7 +60,7 @@ module ApplicationHelper
   end
 
   def hide_title?
-    current_page_slug.nil? || %w(blog).include?(current_page_slug)
+    current_page_slug.nil? || %w(blog it travel photo life_and_fun).include?(current_page_slug)
   end
 
   def parallax_colors
@@ -79,6 +79,36 @@ module ApplicationHelper
       "page-header-very-small ChannelBackground u-blog"
     else
       "page-header-very-small #{random_bg}"
+    end
+  end
+
+  def get_blog_icon_css_class(blog)
+    case blog.slug
+    when 'it'
+      'fa fa-laptop'
+    when 'life_and_fun'
+      'fa fa-heart'
+    when 'photo'
+      'fa fa-camera'
+    when 'travel'
+      'fa fa-suitcase'
+    else
+      'fa fa-question'
+    end
+  end
+
+  def get_blog_css_class(blog)
+    case blog.slug
+    when 'it'
+      'text-info'
+    when 'life_and_fun'
+      'text-danger'
+    when 'photo'
+      'text-warning'
+    when 'travel'
+      'text-success'
+    else
+      ''
     end
   end
 
@@ -140,9 +170,9 @@ module ApplicationHelper
   end
 
   def render_logo_link(options)
-    title = if @current_storytime_site.title =~ /<logo>/
+    title = if @current_storytime_site.title == 'Banana Beer'
       image = image_tag(options.fetch(:image, 'logo.svg'), class: options.fetch(:image_css_class, 'small_logo'))
-      @current_storytime_site.title.gsub(/<logo>/, image).html_safe
+      "Banana #{image} Beer".html_safe
     else
       @current_storytime_site.title
     end

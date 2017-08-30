@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <% @posts.each do |post| %>
-          <%= render partial: 'post_travel', locals: { post: post } %>
+          <%= render partial: '/storytime/banana-beer/blogs/post_travel', locals: { post: post } %>
         <% end %>
         <%= paginate @posts, param_name: "page_number" %>
       </div>

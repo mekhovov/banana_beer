@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center">
       <h2 class="title">
-        <%= page_title %>
+        <%#= page_title %>
       </h2>
     </div>
   </div>
@@ -13,20 +13,16 @@
 <div class="features-blog" >
   <div class="container">
     <div class="row bottom-line">
-        <% PostCategory.blog_categories.order_by_position.each do |category| %>
+        <% blogs_for_my_blog_page.each do |blog| %>
           <div class="col-3 col-md-3 col-sm-3">
-            <!-- # TODO: make better routes -->
-            <%= link_to "/#{category.slug}", class: "#{category.slug} #{'active' if params[:action] == category.slug}" do %>
+            <%= link_to "/#{blog.slug}", class: "#{blog.slug} #{'active' if params[:id] == blog.slug}" do %>
                 <div class="info">
                   <div class="icon">
-                    <i class="<%= category.icon_css_class %>" aria-hidden="true"></i>
+                    <i class="<%= get_blog_icon_css_class(blog) %>" aria-hidden="true"></i>
                   </div>
                   <h6 class="title">
-                    <%= category.name %>
+                    <%= blog.title %>
                   </h6>
-                  <p>
-                    <%= category.description %>
-                  </p>
                 </div>
             <% end %>
           </div>
@@ -34,6 +30,3 @@
     </div>
   </div>
 </div>
-
-
-

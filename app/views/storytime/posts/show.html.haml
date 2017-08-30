@@ -11,7 +11,7 @@
     .article
       .row
         .col-md-10.offset-md-1
-          = render_category(@post.post_category, :h4, 'text-center title-uppercase')
+          = render_blog_name_and_icon(@post.blog, :h4, 'text-center title-uppercase')
           %h6.text-center
             = @post.published_at.strftime("%b %d, %Y")
 

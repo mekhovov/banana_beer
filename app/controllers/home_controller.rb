@@ -9,6 +9,7 @@ class HomeController < Storytime::PagesController
   end
 
   private
+
     def load_page
       @page = @current_storytime_site.homepage
     end
