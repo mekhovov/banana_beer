@@ -1,4 +1,4 @@
-.blog-2.section.section-gray
+.blog-2.section{ class: Setup.site_settings[:recent_posts][:section_class] }
   .container
     .row
       .col-md-10.offset-md-1
@@ -6,15 +6,14 @@
           =t('defaults.recent_posts')
           %br
         .row
-          - recent_posts.each do |post|
+          - Setup.get_posts_for_recent_posts_section.each do |post|
             .col-md-4
               .card.card-blog
                 .card-image
                   = link_to storytime.post_path(post) do
                     = image_tag post_primary_or_default_image_url(post), class: "img img-raised"
                 .card-block
-                  %h6.card-category.text-info
-                    = render_blog_name_and_icon(post.blog)
+                  = render_blog_name_and_icon(post.blog)
                   .card-title
                     %h5
                       = link_to post.title, storytime.post_path(post)

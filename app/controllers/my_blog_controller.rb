@@ -12,7 +12,7 @@ class MyBlogController < Storytime::BlogsController
   private
 
     def load_page
-      @posts = MyPost.by_blogs(MyPost::blogs_for_my_blog_page)
+      @posts = Setup.get_posts_for_my_blog_page
     end
 
 end

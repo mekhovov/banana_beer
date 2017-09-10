@@ -5,11 +5,13 @@ ua:
   defaults:
     read_more: читати далі
     recent_posts: Останні Записи в Блозі
+    recent_photos: Останні Фото
     sign_in: Увійти
     sign_out: Вийти
     admin: Адмін
     search: Пошук
     read_all_posts: Читати Всі Записи в Блозі
+    see_all_photos: Дивитися всі Фото
     add_comment: Додати Комментар
     categories: Категорії
     tags: Тегі

@@ -24,8 +24,8 @@ module ApplicationHelper
   def render_blog_name_and_icon(blog, h = :h6, additional_css_classes = nil)
     return '' if blog.nil?
     content_tag :a, href: "/#{blog.slug}" do
-      content_tag h, class: "card-category #{get_blog_css_class(blog)} #{additional_css_classes}" do
-        content_tag :i, class: get_blog_icon_css_class(blog) do
+      content_tag h, class: "card-category #{Setup.site_settings[blog.slug.to_sym][:blog_css_class]} #{additional_css_classes}" do
+        content_tag :i, class: Setup.site_settings[blog.slug.to_sym][:blog_icon_css_class] do
           blog.title
         end
       end
@@ -34,6 +34,14 @@ module ApplicationHelper
 
   def current_page_slug
     @page&.slug
+  end
+
+  def site_current_page
+    page = current_page_slug.try(:to_sym)
+    page ||= :blog if current_page?(:my_blog)
+    page ||= :home if current_page?(:root)
+    page ||= :post if controller_name == 'posts'
+    page
   end
 
   def title_css_style
@@ -59,57 +67,8 @@ module ApplicationHelper
     end
   end
 
-  def hide_title?
-    current_page_slug.nil? || %w(blog it travel photo life_and_fun).include?(current_page_slug)
-  end
-
   def parallax_colors
     %w(blue azure green orange red purple)
-  end
-
-  def random_bg
-    "header-filter parallax parallax-product parallax-#{parallax_colors.sample}"
-  end
-
-  def header_page_title_class
-    case current_page_slug
-    when 'home'
-      "page-header-small"
-    when 'blog'
-      "page-header-very-small ChannelBackground u-blog"
-    else
-      "page-header-very-small #{random_bg}"
-    end
-  end
-
-  def get_blog_icon_css_class(blog)
-    case blog.slug
-    when 'it'
-      'fa fa-laptop'
-    when 'life_and_fun'
-      'fa fa-heart'
-    when 'photo'
-      'fa fa-camera'
-    when 'travel'
-      'fa fa-suitcase'
-    else
-      'fa fa-question'
-    end
-  end
-
-  def get_blog_css_class(blog)
-    case blog.slug
-    when 'it'
-      'text-info'
-    when 'life_and_fun'
-      'text-danger'
-    when 'photo'
-      'text-warning'
-    when 'travel'
-      'text-success'
-    else
-      ''
-    end
   end
 
   def page_title

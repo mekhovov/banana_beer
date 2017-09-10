@@ -13,12 +13,12 @@
 <div class="features-blog" >
   <div class="container">
     <div class="row bottom-line">
-        <% blogs_for_my_blog_page.each do |blog| %>
+        <% Setup.get_blogs_for_my_blog_page.each do |blog| %>
           <div class="col-3 col-md-3 col-sm-3">
             <%= link_to "/#{blog.slug}", class: "#{blog.slug} #{'active' if params[:id] == blog.slug}" do %>
                 <div class="info">
                   <div class="icon">
-                    <i class="<%= get_blog_icon_css_class(blog) %>" aria-hidden="true"></i>
+                    <i class="<%= Setup.site_settings[blog.slug.to_sym][:blog_icon_css_class] %>" aria-hidden="true"></i>
                   </div>
                   <h6 class="title">
                     <%= blog.title %>

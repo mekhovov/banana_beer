@@ -2,7 +2,7 @@
 
 <%= render :partial => "shared/blog_header" %>
 
-<div class="section section-white section-blog">
+<div class="section <%= Setup.site_settings[site_current_page][:section_class] %> section-blog">
   <div class="container">
     <div class="row">
       <div class="col-md-10">

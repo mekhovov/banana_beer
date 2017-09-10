@@ -1,5 +1,5 @@
-.page-header{ class: "header #{header_page_title_class}", style: title_css_style }
+.page-header{ class: "header #{Setup.site_settings[site_current_page][:header_page_title_class]}", style: title_css_style }
   %div{ class: "#{page_filter_class}" }
   .content-center
     .container
-      = page_title unless hide_title?
+      = page_title unless Setup.site_settings[site_current_page][:hide_title]

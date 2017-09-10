@@ -23,10 +23,10 @@
     <%= render "storytime/application/storytime/navigation", storytime_button_classes: "rounded" %>
     <%= render "storytime/application/storytime/flash" %>
     <%= render "storytime/application/storytime/header" %>
-    <%= render partial: 'shared/header_page_title' unless hide_title? %>
+    <%= render partial: 'shared/header_page_title' unless Setup.site_settings[site_current_page][:hide_title] %>
 
     <div class="wrapper">
-        <div class="main">
+        <div class="main <%= Setup.site_settings[site_current_page][:section_class] %>">
             <%= yield %>
         </div>
         <%= render "storytime/application/storytime/footer" %>

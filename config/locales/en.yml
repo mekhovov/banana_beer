@@ -5,11 +5,13 @@ en:
   defaults:
     read_more: read more
     recent_posts: Recent Blogposts
+    recent_photos: Recent Photos
     sign_in: Sign In
     sign_out: Sign Out
     admin: Admin
     search: Search
     read_all_posts: Read All Blogposts
+    see_all_photos: See All Photos
     add_comment: Add Comment
     categories: Categories
     tags: Tags

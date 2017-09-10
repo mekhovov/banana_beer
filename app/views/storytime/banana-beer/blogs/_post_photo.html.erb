@@ -1,4 +1,5 @@
-<figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class="col-md-6 col-sm-6 gallery-item">
+<% figure_class ||= 'col-md-4 col-sm-6 gallery-item' %>
+<figure itemprop="associatedMedia" itemtype="http://schema.org/ImageObject" class=" <%= figure_class %>">
 
   <%= link_to post_primary_or_default_image_url(post), itemprop: "contentUrl", 'data-size': post_image_dimensions(post) do %>
     <%= image_tag post_primary_or_default_image_url(post), class: "small-horizontal-image img-not-rounded img-responsive", itemprop: "thumbnail",  alt: post.title %>

@@ -1,5 +1,5 @@
-<% if hide_title? %>
-  <nav class="navbar navbar-toggleable-md fixed-top navbar-default navbar-light">
+<% if Setup.site_settings[site_current_page][:hide_title] %>
+  <nav class="navbar navbar-toggleable-md fixed-top navbar-default navbar-light <%= Setup.site_settings[site_current_page][:nav_bg] %>">
 <% else %>
   <nav class="navbar navbar-toggleable-md fixed-top nav-up navbar-transparent" color-on-scroll="200">
 <% end %>

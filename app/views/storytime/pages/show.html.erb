@@ -1,4 +1,4 @@
-<div class="section section-gray section-<%= @page.slug %>">
+<div class="section <%= Setup.site_settings[site_current_page][:section_class] %> section-<%= @page.slug %>">
   <div class="container">
     <% if params[:preview] %>
       <div class="alert alert-info" role="alert">

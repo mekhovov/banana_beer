@@ -1,0 +1,16 @@
+.blog-2.section{ class: Setup.site_settings[:photo][:section_class] }
+  .container
+    .row
+      .col-md-10.offset-md-1
+        %h2.title
+          =t('defaults.recent_photos')
+          %br
+        .row.my-gallery{ itemtype: "http://schema.org/ImageGallery" }
+          - Setup.get_posts_for_recent_photos_section.each do |post|
+            = render partial: '/storytime/banana-beer/blogs/post_photo', locals: { post: post, figure_class: 'col-md-6 col-sm-6 gallery-item' }
+        .separator
+        %br
+        .content-center
+          .text-center
+            = link_to "/photo", class: 'btn btn-outline-default btn-round' do
+              = t('defaults.see_all_photos')
