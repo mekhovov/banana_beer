@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.4.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.9'
@@ -61,3 +60,6 @@ gem 'activeadmin'
 # use forms for storytime and leather to support bootstrap 4
 gem 'storytime', '~> 2.1', :git => "https://github.com/mekhovov/storytime.git", :branch => 'master'
 gem 'leather', '>= 3.5', :git => "https://github.com/mekhovov/leather.git", :branch => 'master'
+
+# gem 'storytime', '~> 2.1', :path => "/Users/alex/work/my_projects/storytime"
+# gem 'leather', '>= 3.5', :path => "/Users/alex/work/my_projects/leather"
