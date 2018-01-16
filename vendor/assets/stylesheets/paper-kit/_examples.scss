@@ -157,9 +157,9 @@
             .container{
                 margin-bottom: 50px;
             }
-
         }
-        
+
+
         .demo-card,
         .card-register{
             background-color: $white-color;
@@ -220,8 +220,7 @@
     }
 }
 #carousel{
-    width: 385px;
-    margin: 40px 0 0 50px;
+    max-width: 385px;
     .card{
         .carousel-item.active{
             display: block !important;
@@ -461,33 +460,27 @@
             margin-top: -10px;
         }
     }
-    .article{
-        // border-top: 1px solid $medium-pale-bg;
-        margin-top: 30px;
-        .main-tag{
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        .title{
-            color: $default-states-color;
-            font-weight: 600;
-        }
+    .main-tag{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .title{
+        color: $default-states-color;
+        font-weight: 600;
+    }
 
-        .card-big-shadow{
-            max-width: 100%;
-        }
-        .card{
-            margin-top: 25px;
-            background-size: cover;
-            min-height: 430px;
-            width: 100%;
-        }
-        .image-thumb{
-            font-size: 14px;
-            color: $muted-color;
-        }
-
-
+    .card-big-shadow{
+        max-width: 100%;
+    }
+    .card{
+        margin-top: 25px;
+        background-size: cover;
+        min-height: 430px;
+        width: 100%;
+    }
+    .image-thumb{
+        font-size: 14px;
+        color: $muted-color;
     }
 }
 .card-blog{
@@ -853,42 +846,7 @@
             color: $muted-color;
         }
     }
-
 }
-@media (min-width: 991px){
-    .container-cards{
-        [class*="col-md-"]{
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-        .social-buttons{
-            z-index: 1;
-        }
-    }
-}
-
-
-@media (max-width: 768px){
-    .presentation-page .components-container .card{
-        margin-bottom: 40px !important;
-    }
-    .btn-wd{
-        min-width: 280px;
-    }
-    .presentation-page .title-brand .type{
-        font-size: 16px;
-        transform: translateY(-28px);
-        -webkit-transform: translateY(-28px);
-        -moz-transform: translateY(-28px);
-        -o-transform: translateY(-28px);
-    }
-}
-@media (max-width: 500px){
-    .presentation-page .section-header .card{
-        min-height: 230px;
-    }
-}
-
 .documentation{
     .filter:after{
         height: 750px !important;

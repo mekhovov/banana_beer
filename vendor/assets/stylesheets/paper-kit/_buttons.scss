@@ -33,6 +33,11 @@
         background-image: none;
         background-color: transparent;
     }
+
+    .nc-icon{
+        position: relative;
+        top: 2px;
+    }
 }
 .btn-just-icon{
     border-radius: $border-radius-btn-large;
@@ -161,7 +166,7 @@
 
         i{
             font-size: $font-size-small;
-
+            top: 1px !important;
         }
     }
     &.btn-lg{
@@ -174,9 +179,10 @@
             font-size: 18px;
             padding: 0;
         }
-
     }
-
+    &.btn-link{
+        padding: 8px !important;
+    }
 }
 .btn-round{
     border-radius: 30px;

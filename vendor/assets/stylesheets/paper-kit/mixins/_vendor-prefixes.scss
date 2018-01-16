@@ -29,6 +29,14 @@
     transition: all $time $type;
 }
 
+@mixin transition-opacity($time, $type){
+    -webkit-transition: opacity $time $type;
+    -moz-transition: opacity $time $type;
+    -o-transition: opacity $time $type;
+    -ms-transition: opacity $time $type;
+    transition: opacity $time $type;
+}
+
 @mixin transition-none(){
     -webkit-transition: none;
     -moz-transition: none;
@@ -36,6 +44,7 @@
     -ms-transition: none;
     transition: none;
 }
+
 
 @mixin transform-scale($value){
      -webkit-transform: scale($value);
@@ -60,6 +69,15 @@
         -ms-transform: translate3d(0, $value, 0);
         transform: translate3d(0, $value, 0);
 }
+
+@mixin transform-translate-y-dropdown($value){
+     -webkit-transform:  translate3d(0, $value, 0) !important;
+        -moz-transform: translate3d(0, $value, 0) !important;
+        -o-transform: translate3d(0, $value, 0) !important;
+        -ms-transform: translate3d(0, $value, 0) !important;
+        transform: translate3d(0, $value, 0) !important;
+}
+
 
 @mixin transform-origin($coordinates){
       -webkit-transform-origin: $coordinates;

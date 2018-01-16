@@ -11,6 +11,9 @@
    @include placeholder($placeholder-gray,1);
 }
 
+.form-control:focus + .input-group-addon{
+    border: 1px solid black;
+}
 .form-control {
     background-color: $white-bg;
     border: 1px solid $medium-gray;
@@ -18,14 +21,20 @@
     color: $font-color;
     font-size: $font-size-base;
     transition: background-color 0.3s ease 0s;
+    padding-right: 0 !important;
     @include input-size($padding-base-vertical, $padding-label-horizontal, $height-base);
     @include box-shadow(none);
 
     &:focus{
-           background-color: $white-bg;
+       background-color: $white-bg;
+       border: 1px solid $table-line-color;
+       @include box-shadow(none);
+       outline: 0 !important;
+
+       +.input-group-addon{
            border: 1px solid $table-line-color;
-           @include box-shadow(none);
-           outline: 0 !important;
+           border-left: none;
+       }
     }
 
     &.no-border{
@@ -42,6 +51,10 @@
     .has-success &{
         border: 1px solid $table-line-color;
         color: $font-color;
+
+        &.form-control-success{
+            padding-right: 2.5em !important;
+        }
     }
     .has-success &:focus{
         border: 1px solid $success-color;
@@ -51,6 +64,10 @@
         background-color: $danger-input-bg;
         border: 1px solid $danger-color;
         color: $danger-color;
+
+        &.form-control-danger{
+            padding-right: 2.5em !important;
+        }
     }
     .has-danger &:focus{
         background-color: $white-color;
@@ -93,7 +110,6 @@
 
 .input-group-addon {
     background-color: $white-bg;
-    // border: solid 1px $table-line-color;
     border-radius: $border-radius-base;
 
     &.no-border{
@@ -115,7 +131,9 @@
         background-color: $white-color;
     }
 }
-
+// .input-group-addon:before{
+//     background: linear-gradient(-90deg, white, rgba(255, 255, 255, 0));
+// }
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .dropdown-toggle,
@@ -172,7 +190,7 @@ textarea.form-control{
 }
 
 .card-form-horizontal{
-    .card-block{
+    .card-body{
         .form-group{
             margin-bottom: 0;
         }

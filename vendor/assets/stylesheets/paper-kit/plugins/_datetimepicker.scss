@@ -52,7 +52,7 @@
   }
 }
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before{
-    border-bottom: 11px solid #F1EAE0;
+    border-bottom: 11px solid $medium-pale-bg;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
@@ -63,7 +63,7 @@
     top: -12px;
 }
 .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after{
-    border-bottom: 11px solid $gray-input-bg;
+    border-bottom: 11px solid $white-color;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
@@ -125,6 +125,7 @@
   height: 38px;
   padding: 0;
 }
+
 .bootstrap-datetimepicker-widget .btn[data-action="incrementHours"]::after {
   content: "Increment Hours";
 }
@@ -248,6 +249,13 @@
   z-index: -1;
   position: relative;
 }
+.table-condensed{
+    .day:hover{
+        div{
+            @include transition(150ms, linear);
+        }
+    }
+}
 .bootstrap-datetimepicker-widget table td.minute > div, .bootstrap-datetimepicker-widget table td.hour > div {
   border-radius: 50%;
 }
@@ -337,6 +345,8 @@
     -o-transform: translate3d(0, -10px, 0);
     -ms-transform: translate3d(0, -10px, 0);
     transform: translate3d(0px, -10px, 0px);
+    -webkit-box-shadow: 0 2px rgba(17, 16, 15, 0.1), 0 2px 10px rgba(17, 16, 15, 0.1);
+    box-shadow: 0 2px rgba(17, 16, 15, 0.1), 0 2px 10px rgba(17, 16, 15, 0.1);
 
     &.top{
         -webkit-transform: translate3d(0px, 0px, 0px);
@@ -347,11 +357,11 @@
     }
     &.open{
         opacity: 1;
-        -webkit-transform: translate3d(0, 10px, 0);
-        -moz-transform: translate3d(0, 10px, 0);
-        -o-transform: translate3d(0, 10px, 0);
-        -ms-transform: translate3d(0, 10px, 0);
-        transform: translate3d(0, 10px, 0);
+        -webkit-transform: translate3d(0, 5px, 0);
+        -moz-transform: translate3d(0, 5px, 0);
+        -o-transform: translate3d(0, 5px, 0);
+        -ms-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
         transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
     }
 }
@@ -373,7 +383,7 @@
         bottom: -12px;
     }
     &:after{
-        border-top: 11px solid #FFFCF5;
+        border-top: 11px solid $white-color;
         border-left: 11px solid transparent;
         border-right: 11px solid transparent;
         content: "";

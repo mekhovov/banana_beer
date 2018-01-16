@@ -1,7 +1,7 @@
 /*!
 
  =========================================================
- * Paper Kit 2 PRO - v2.0.0
+ * Paper Kit 2 PRO - v2.1.0
  =========================================================
 
  * Product Page: http://www.creative-tim.com/product/paper-kit-2-pro
@@ -87,8 +87,8 @@ $(document).ready(function(){
                 clear: 'fa fa-trash',
                 close: 'fa fa-remove'
             }
-
         });
+
     };
 
     // Change the collor of navbar collapse

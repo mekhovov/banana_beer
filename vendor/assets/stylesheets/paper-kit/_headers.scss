@@ -74,8 +74,6 @@
     }
 }
 .header-video{
-    overflow: hidden;
-
     &.state-play{
         .filter::after{
             opacity: 0;
@@ -98,4 +96,54 @@
 video{
     position: absolute;
     width: 100%;
+}
+
+// For IE Browser
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    .page-header{
+        .content-center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -75%);
+        }
+        .presentation-title{
+            background: none !important;
+        }
+    }
+
+    .subscribe-line{
+        .form-group{
+            .form-control{
+                line-height: 50px !important;
+                height: 50px !important;
+            }
+        }
+    }
+
+    .nav-tabs .nav-item .active.nav-link::before{
+        bottom: 2px !important;
+    }
+
+    .nav-tabs .nav-item .active.nav-link::after{
+        bottom: 1px !important;
+    }
+    .nav-stacked .active.nav-link::before{
+        right: 0 !important;
+        bottom: 7px !important;
+    }
+    .nav-stacked .active.nav-link::after{
+        right: -2px !important;
+        bottom: 0 !important;
+        top: 13px !important;
+    }
+    .buy-product{
+        .page-carousel{
+            .carousel-inner{
+                max-height: 570px !important;
+            }
+        }
+    }
 }

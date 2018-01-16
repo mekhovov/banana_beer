@@ -16,7 +16,7 @@
         justify-content: center;
         min-height: 400px;
 
-        .card-block{
+        .card-body{
             min-height: auto;
             -webkit-box-flex: initial;
             -webkit-flex: initial;
@@ -35,7 +35,7 @@
         padding-top: 0 !important;
     }
     .card.card-plain{
-        .card-block{
+        .card-body{
             margin-top: 60px;
         }
     }

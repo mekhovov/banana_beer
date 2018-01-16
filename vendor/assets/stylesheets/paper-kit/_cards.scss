@@ -71,7 +71,7 @@
         border-radius: 0;
 
 
-        .card-block{
+        .card-body{
             padding-left: 5px;
             padding-right: 5px;
         }
@@ -97,7 +97,7 @@
                 margin-bottom: 30px;
             }
         }
-        .card-block{
+        .card-body{
             padding: 15px 30px;
             margin-top: -70px;
 
@@ -152,7 +152,7 @@
                 border-bottom: 1px solid $medium-gray;
             }
         }
-        .card-block{
+        .card-body{
             .card-icon{
                 float: left;
                 margin-top: 24px;
@@ -314,7 +314,7 @@
 
     }
 
-    .card-block{
+    .card-body{
         .card-footer{
             padding: 0;
         }
@@ -377,7 +377,7 @@
        padding: 30px 0 0;
     }
 
-    .card-block{
+    .card-body{
         padding: 20px;
 
         .card-title{
@@ -453,7 +453,7 @@
     }
 
     &.card-with-border{
-        .card-block{
+        .card-body{
             padding: 15px 15px 25px 15px;
         }
 
@@ -476,7 +476,7 @@
     }
 
     &.card-just-text{
-        .card-block{
+        .card-body{
             padding: 50px 65px;
             text-align: center;
         }
@@ -496,7 +496,7 @@
         background-size: cover;
         text-align: center;
 
-        .card-block{
+        .card-body{
             position: relative;
             z-index: 2;
             min-height: 280px;
@@ -544,7 +544,7 @@
         .card-title,
         .card-category,
         .card-text,
-        .card-block,
+        .card-body,
         .card-footer,
         .stats,
         small,
@@ -623,7 +623,7 @@
         border-radius: $border-radius-extreme $border-radius-extreme 0 0;
     }
 
-    .card-block{
+    .card-body{
         .card-title{
             margin-top: 5px !important;
         }
@@ -653,7 +653,7 @@
 .card-pricing{
     text-align: center;
 
-    .card-block{
+    .card-body{
         padding: 15px!important;
     }
     .card-category{
@@ -811,7 +811,7 @@
             }
         }
     }
-    .card-block{
+    .card-body{
         // margin-left: 40px;
         min-height: 50px;
         padding: 0 4px 0.5em;
@@ -857,7 +857,7 @@
         }
     }
 
-    .card-block-center{
+    .card-body-center{
         text-align: center;
         .author{
             position: relative;
@@ -878,7 +878,7 @@
 
 }
 .card-product{
-    .card-block{
+    .card-body{
         & .card-description{
             .name{
                 margin-top: 20px;

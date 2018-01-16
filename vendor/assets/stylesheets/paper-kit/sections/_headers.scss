@@ -1,4 +1,6 @@
-#vertical-nav {
+@import '../variables.scss';
+
+#cd-vertical-nav {
     position: fixed;
     right: -78px;
     top: 50%;
@@ -33,7 +35,7 @@
         }
 
         &:hover{
-            .pk-label{
+            .cd-label{
                 opacity: 1;
                 left: -90%;
                 -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
@@ -49,13 +51,19 @@
             }
         }
 
+        &.is-selected{
+            .cd-dot{
+                background-color: $primary-color;
+            }
+        }
+
         &:after{
             content: "";
             clear: both;
             display: table;
         }
     }
-    .pk-dot{
+    .cd-dot{
         position: relative;
         top: 8px;
         right: calc(100% - 15px);
@@ -72,7 +80,7 @@
         -o-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
     }
-    .pk-label{
+    .cd-label{
         position: relative;
         margin-right: 10px;
         padding: 7px 14px;
@@ -91,11 +99,12 @@
     }
 }
 .header-1{
-    padding-top: 50px;
+    padding-top: 40px;
 }
+
 .header-2{
     .header{
-        .card-block{
+        .card-body{
             padding: 20px 20px 5px 20px;
         }
     }
