@@ -1,58 +1,62 @@
-.section{
+.section {
     padding: 70px 0;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: $white-color;
+
+  .card-profile {
+    margin-top: 100px;
+  }
 }
-.section-with-space{
+.section-with-space {
     padding: 60px 0;
 }
-.section-gray{
+.section-gray {
     background-color: #EEEEEE;
 }
-.section-nude{
+.section-nude {
     background-color: $bg-nude;
 }
-.section-gold{
+.section-gold {
     background-color: #caac90;
     color: $white-color;
 }
-.section-brown{
+.section-brown {
     background-color: #A59E94;
     color: $white-color;
 }
-.section-light-blue{
+.section-light-blue {
     background-color: $primary-color;
     color: $white-color;
 }
-.section-dark-blue{
+.section-dark-blue {
     background-color: #506367;
     color: $white-color;
 }
-.section-dark{
+.section-dark {
     background-color: #151f20;
 }
 .section-image,
 .section-gold,
-.section-dark{
+.section-dark {
     position: relative;
 
-    .title,
-    .info-title,
-    .card-plain .card-title{
-        color: $white-color !important;
-    }
-    .category,
-    .description,
-    .card-plain .card-description,
-    .card-plain .card-category{
-        color: rgba($white-color, .7);
-    }
-    hr{
-        border-color: rgba(255, 255, 255, 0.19);
-    }
+  .title,
+  .info-title,
+  .card-plain .card-title {
+      color: $white-color !important;
+  }
+  .category,
+  .description,
+  .card-plain .card-description,
+  .card-plain .card-category {
+      color: rgba($white-color, .7);
+  }
+  hr{
+      border-color: rgba(255, 255, 255, 0.19);
+  }
 }
 .page-header,
-.carousel-caption{
+.carousel-caption {
     .title,
     .info-title{
         color: $white-color;
@@ -63,14 +67,14 @@
 [class*="projects-"],
 [class*="pricing-"],
 [class*="testimonials-"],
-[class*="contactus-"]{
+[class*="contactus-"] {
     padding: 80px 0;
 }
-.section-image{
+.section-image {
     background-position: center center;
     background-size: cover;
 
-    &:before{
+    &:before {
         background-color: rgba(0, 0, 0, 0.5);
         content: "";
         display: block;
@@ -81,8 +85,28 @@
         width: 100%;
         z-index: 1;
     }
-    & .container{
+    & .container {
         position: relative;
         z-index: 2;
     }
+}
+
+.section-dark {
+  .card-profile.card-plain {
+    .card-title {
+      color: $white-color !important;
+    }
+  }
+  .title {
+    color: $white-color;
+  }
+}
+
+.section-image {
+  .card-user.card-plain {
+    .card-title,
+    .card-description {
+        color: $white-color;
+    }
+  }
 }

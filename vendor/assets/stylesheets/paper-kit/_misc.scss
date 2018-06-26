@@ -117,3 +117,80 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .bg-danger{
     @include navbar-color($bg-danger !important);
 }
+
+
+.wrapper {
+  -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  left: 0;
+  background-color: $white-color;
+  position: relative;
+  z-index: 1;
+}
+
+// Pulsing Heart (footer)
+.heart {
+  color: #EB5E28;
+  animation: heathing 1s ease infinite,;
+}
+
+@keyframes heathing {
+  0% { transform: scale( .75 ); }
+  20% { transform: scale( 1 ); }
+  40% { transform: scale( .75 ); }
+  60% { transform: scale( 1 ); }
+  80% { transform: scale( .75 ); }
+  100% { transform: scale( .75 ); }
+}
+
+
+.bd-docs {
+  .page-header {
+    min-height: 50vh;
+  }
+}
+
+.offline-doc {
+  .navbar.navbar-transparent{
+    padding-top: 25px;
+    border-bottom: none;
+
+    .navbar-minimize {
+      display: none;
+    }
+    .navbar-brand,
+    .collapse .navbar-nav .nav-link {
+      color: $white-color !important;
+    }
+  }
+
+  .footer{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    bottom: 0;
+    z-index: 3;
+
+    nav > ul a:not(.btn),
+    .copyright {
+      color: $white-color !important;
+    }
+  }
+
+  .page-header{
+    .container {
+      z-index: 3;
+    }
+    &:after {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+}

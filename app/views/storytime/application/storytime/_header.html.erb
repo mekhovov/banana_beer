@@ -1,17 +1,19 @@
 <% if Setup.site_settings[site_current_page][:hide_title] %>
-  <nav class="navbar navbar-toggleable-md fixed-top navbar-default navbar-light <%= Setup.site_settings[site_current_page][:nav_bg] %>">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-default  <%= Setup.site_settings[site_current_page][:nav_bg] %>" >
+
 <% else %>
-  <nav class="navbar navbar-toggleable-md fixed-top nav-up navbar-transparent" color-on-scroll="200">
+  <nav class="navbar navbar-expand-lg fixed-top nav-down navbar-transparent" color-on-scroll="500">
 <% end %>
 
   <div class="container">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-bar"></span>
-      <span class="navbar-toggler-bar"></span>
-      <span class="navbar-toggler-bar"></span>
-    </button>
-
-    <%= render_logo_link link_css_class: 'navbar-brand' %>
+    <div class="navbar-translate">
+      <%= render_logo_link link_css_class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </button>
+    </div>
 
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">

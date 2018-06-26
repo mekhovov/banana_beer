@@ -4,7 +4,10 @@
     position: relative;
 }
 
-.form-check{
+.form-check {
+  padding-left: 0;
+  margin-bottom: .5rem;
+
     .form-check-label{
         display: inline-block;
         position: relative;
@@ -15,7 +18,7 @@
     }
 
     .form-check-sign::before,
-    .form-check-sign::after{
+    .form-check-sign::after {
         content: " ";
         display: inline-block;
         position: absolute;
@@ -23,22 +26,21 @@
         height: 24px;
         left: 0;
         cursor: pointer;
-        border-radius: 3px;
+        border-radius: 6px;
         top: 0;
         background-color: #AAA7A4;
-        border: 1px solid $light-gray;
         -webkit-transition: opacity 0.3s linear;
         -moz-transition: opacity 0.3s linear;
         -o-transition: opacity 0.3s linear;
         -ms-transition: opacity 0.3s linear;
         transition: opacity 0.3s linear;
     }
-    .form-check-sign::after{
+    .form-check-sign::after {
         font-family: 'FontAwesome';
         content: "\f00c";
-        top: 0px;
+        top: -1px;
         text-align: center;
-        font-size: 14px;
+        font-size: 15px;
         opacity: 0;
         color: #FFF;
         border: 0;
@@ -80,6 +82,8 @@
 }
 
 .form-check-radio{
+  margin-left: -3px;
+
     .form-check-label{
         padding-left: 2rem;
     }

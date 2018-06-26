@@ -96,12 +96,13 @@
 .register-card .forgot{
     text-align: center;
 }
-.register {
+.register-page {
     .card-register{
-        background-color: $white-color;
-        .card-title{
-            color: #66615b;
-        }
+      background-color: $white-color;
+
+      .card-title{
+          color: #66615b;
+      }
     }
 }
 
@@ -116,6 +117,7 @@
     }
     .demo-footer{
         bottom: 10px;
+        left: 0;
         color: #fff;
         position: absolute;
         z-index: 3;
@@ -152,10 +154,14 @@
             }
         }
     }
-    &.register{
+    &.register-page{
         .page-header{
             .container{
                 margin-bottom: 50px;
+
+                .info-horizontal .icon {
+                  margin-top: 10px;
+                }
             }
         }
 
@@ -230,7 +236,7 @@
         }
     }
 }
-.contact-us, .discover, .search{
+.contact-page, .discover, .search-page{
     .section:first-of-type {
     padding-top: 100px;
     }
@@ -283,8 +289,8 @@
 }
 
 // theme changes for settings page
-.settings,
-.profile{
+.settings-page,
+.profile-page{
     .settings-form{
         margin-bottom: 50px;
         margin-top: 50px;
@@ -346,7 +352,7 @@
         margin-top: 20px;
     }
     .form-inline{
-        margin: 20px 0 40px 135px;
+        margin: 20px 0 40px 165px;
     }
     .items-row{
         margin-bottom: 50px;
@@ -383,7 +389,7 @@
         margin-top: 40px;
     }
 }
-.buy-product{
+.product-page{
     background-color: #f4f3ef;
     .container{
         max-width: 970px;
@@ -421,7 +427,7 @@
          }
     }
 }
-.contact-us{
+.contact-page{
     .navbar{
         margin-bottom: 0px;
     }
@@ -445,7 +451,7 @@
         background-color: #f4f3ef;
     }
 }
-.blog, .blog-page{
+.blog, .blog-post{
     background-color: $white-color;
     .navbar{
         border-bottom: 0 none;
@@ -490,7 +496,7 @@
         }
     }
 }
-.blog{
+.blog-posts{
     .article{
         .article-content{
             p{
@@ -507,7 +513,7 @@
         }
     }
 }
-.blog-page{
+.blog-post{
     .article{
         .article-content{
             h4{
@@ -561,7 +567,7 @@
         }
     }
     .blog-header-image{
-        background-image: url('../img/farid-askerov.jpg');
+        background-image: url('{{ path-general }}/assets/img{{ site.product_path }}/farid-askerov.jpg');
     }
     .navbar{
         input{
@@ -569,7 +575,7 @@
         }
     }
 }
-.search{
+.search-page{
     background-color: $white-color;
     .navbar-transparent{
         border-bottom: 0 none;
@@ -591,12 +597,15 @@
         background-color: $white-color;
         font-size: 2.5em;
         color: $muted-color;
+        position: absolute;
+        top: 6px;
+        left: 10px;
     }
     .input-xtreme{
         background-color: $white-color;
         font-size: 3em;
         height: 70px;
-        margin-left: 20px;
+        margin-left: 70px;
         padding-left: 0px;
     }
     .follows{
@@ -630,7 +639,7 @@
 }
 
 // twitter pages
-.twitter-profile-tweets{
+.twitter-redesign{
     .nav-tabs > li.active *::after {
         border-bottom: 11px solid #f9f9f7;
     }
@@ -794,7 +803,7 @@
         }
     }
 }
-.ecommerce{
+.ecommerce-page{
     .container{
         max-width: 970px;
     }
@@ -850,5 +859,75 @@
 .documentation{
     .filter:after{
         height: 750px !important;
+    }
+}
+
+// ERROR PAGES (400, 422, 500)
+
+body{
+    overflow-x:hidden;
+    width: 100%;
+}
+.background-img{
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+
+    .filter:after{
+        background-color: rgba(0, 0, 0, 0.5);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .social-buttons{
+        .btn:nth-child(2){
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    .title{
+        margin: 0 auto;
+        margin-top: 15%;
+        margin-bottom: 30px;
+        font-size: 10em;
+        color: #FFFFFF;
+        z-index: 2;
+        text-align: center;
+    }
+    .card{
+        &.card-just-text{
+            .card-body{
+                padding: 50px 30px;
+            }
+        }
+        .icon{
+            padding: 0;
+            margin-top: 30px;
+            margin-bottom: -30px;
+            i{
+                height: 90px;
+                width: 90px;
+                font-size: 35px;
+            }
+        }
+        .card-text{
+            padding-bottom: 0;
+            margin-bottom: -20px;
+        }
+    }
+
+    .discover-pages{
+        margin: 0 auto;
+        color: #fff;
+        z-index: 2;
+        padding-bottom: 20px;
+    }
+    .error-msg{
+        text-align: center
     }
 }

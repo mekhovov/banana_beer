@@ -28,6 +28,7 @@
     }
     .media{
         margin-top: 30px;
+        margin-left: -25px;
     }
     .media-footer{
         margin-top: 20px;
@@ -58,6 +59,9 @@
     textarea{
         margin: $margin-bottom;
         font-size: $font-paragraph;
+    }
+    .form {
+      width: 100%;
     }
 }
 

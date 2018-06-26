@@ -48,7 +48,10 @@ end
 gem 'rails_12factor', group: :production
 
 # bootstrap 4
-gem 'bootstrap', '4.0.0.alpha6'
+gem 'bootstrap', '~> 4.1.1'
+
+gem 'font-awesome-rails'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
@@ -61,5 +64,6 @@ gem 'activeadmin'
 gem 'storytime', '~> 2.1', :git => "https://github.com/mekhovov/storytime.git", :branch => 'master'
 gem 'leather', '>= 3.5', :git => "https://github.com/mekhovov/leather.git", :branch => 'master'
 
+## for local development
 # gem 'storytime', '~> 2.1', :path => "/Users/alex/work/my_projects/storytime"
 # gem 'leather', '>= 3.5', :path => "/Users/alex/work/my_projects/leather"

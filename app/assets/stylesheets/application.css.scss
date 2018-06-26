@@ -17,11 +17,23 @@
 // PhotoSwipe images path
 $pswp__assets-path: asset-path('/assets/images/photo_swipe/') !default; // path to skin assets folder (preloader, PNG and SVG sprite)
 
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
 @import 'fonts';
 @import "bootstrap3/bootstrap_3_variables";
 @import "bootstrap3/_glyphicons"; // https://getbootstrap.com/docs/3.3/components/#glyphicons
+@import "font-awesome"; // https://github.com/bokmann/font-awesome-rails
 @import "bootstrap";
-@import 'nucleo-icons'; // http://demos.creative-tim.com/paper-kit-2-pro/nucleo-icons-demo.html
 @import 'storytime_custom';
 @import 'paper-kit'; // http://demos.creative-tim.com/paper-kit-2-pro/presentation.html
 @import 'colors_and_backgrounds';

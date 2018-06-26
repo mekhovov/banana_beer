@@ -23,6 +23,35 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 // $mdb-font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 $mdb-font-family: "Montserrat", "Helvetica", Arial, sans-serif !default;
 
+$btn-primary-color:              #fff !default;
+$brand-primary:         #428bca !default;
+$btn-primary-bg:                 $brand-primary !default;
+
+$brand-primary:         #428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+
+$state-danger-bg:                #f2dede !default;    
+$alert-danger-bg:             $state-danger-bg !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$alert-danger-border:         $state-danger-border !default;
+$state-danger-text:              #a94442 !default;
+$alert-danger-text:           $state-danger-text !default;
+
+$list-group-link-color:         #555 !default;
+$list-group-link-hover-color:   $list-group-link-color !default;
+
 // Mixins
 // --------------------------------------------------
 

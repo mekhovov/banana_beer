@@ -1,29 +1,36 @@
-/*           Labels & Progress-bar              */
-.label{
+/*           badges & Progress-bar              */
+.badge{
     padding: 0.4em 0.9em;
-    border-radius: 16px;
-    color: #FFFFFF;
+    color: $white-color;
     font-weight: 500;
     font-size: 0.75em;
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 3px;
+    padding-top: 5px;
+
+  &:focus {
+    outline: none;
+  }
+  span[data-role="remove"]:focus {
+    outline: none;
+  }
 }
-.label-primary{
+.badge-primary{
     background-color: $primary-color;
 }
-.label-info{
+.badge-info{
     background-color: $info-color;
 }
-.label-success{
+.badge-success{
     background-color: $success-color;
 }
-.label-warning{
+.badge-warning{
     background-color: $warning-color;
 }
-.label-danger{
+.badge-danger{
     background-color: $danger-color;
 }
-.label-default{
+.badge-default{
     background-color: $default-color;
 }

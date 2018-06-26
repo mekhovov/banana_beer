@@ -79,23 +79,26 @@
 .btn-outline-danger  { @include btn-outline-styles($danger-color, $danger-states-color); }
 .btn-outline-neutral { @include btn-outline-styles($white-color, $default-states-color);
     &:hover,
-    &:focus{
-        color: $default-states-color;
+    &:focus,
+    &:active {
+        color: $default-states-color !important;
         background-color: $white-color;
     }
 }
 .btn-neutral {
     @include btn-styles($white-color, $white-color);
     color: $default-color;
+
     &:hover,
-    &:focus{
-        color: $default-states-color;
+    &:focus,
+    &:active {
+        color: $default-states-color !important;
     }
 
     &.btn-border{
         &:hover,
         &:focus{
-            color: $default-color;
+          color: $default-color;
         }
 
         &:active,
@@ -104,6 +107,15 @@
              background-color: $white-color;
              color: $default-color;
         }
+    }
+    &.btn-link:hover,
+    &.btn-link:focus,
+    &.btn-link:active {
+      color: $white-color !important;
+    }
+
+    &.btn-link:focus:active {
+      color: $default-states-color !important;
     }
 
     &.btn-link:active,
@@ -197,9 +209,6 @@
 }
 .share-buttons .btn-outline-default{
     margin-top: 24px;
-}
-#modals .btn-outline-neutral{
-    margin-bottom: 10px;
 }
 .btn-group.select{
     overflow: visible !important;

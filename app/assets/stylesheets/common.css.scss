@@ -172,6 +172,7 @@
 .search_form {
   .seacrh_field {
     padding-right: 35px;
+    max-width: 170px;
   }
   .search_nav_button, .search_nav_button:hover, .search_nav_button:focus {
     background: transparent;
@@ -218,6 +219,14 @@ ul.tags {
 
 .nowrap {
     white-space: nowrap;
+}
+
+.fa,
+.fas,
+.far,
+.fal,
+.fab {
+  display: inline;
 }
 
 //========================= Card =========================

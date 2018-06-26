@@ -7,17 +7,16 @@
           %br
         .row
           - Setup.get_posts_for_recent_posts_section.each do |post|
-            .col-md-4
+            .col-md-4.col-sm-6
               .card.card-blog
                 .card-image
                   = link_to storytime.post_path(post) do
                     = image_tag post_primary_or_default_image_url(post), class: "img img-raised"
-                .card-block
+                .card-body
                   = render_blog_name_and_icon(post.blog)
-                  .card-title
-                    %h5
-                      = link_to post.title, storytime.post_path(post)
-                  %p.card-description
+                  %h4.card-title
+                    = link_to post.title, storytime.post_path(post)
+                  .card-description
                     = post.excerpt.html_safe
                     %p
                       = link_to storytime.post_path(post), class: 'btn btn-link btn-default btn-move-right pull-right nowrap' do
