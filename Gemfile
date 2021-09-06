@@ -59,6 +59,9 @@ end
 # activeadmin https://activeadmin.info
 gem 'activeadmin'
 
+# new ruby support
+gem 'bigdecimal', '1.3.5'
+
 # storytime CMS https://github.com/CultivateLabs/storytime
 # use forms for storytime and leather to support bootstrap 4
 gem 'storytime', '~> 2.1', :git => "https://github.com/mekhovov/storytime.git", :branch => 'master'
